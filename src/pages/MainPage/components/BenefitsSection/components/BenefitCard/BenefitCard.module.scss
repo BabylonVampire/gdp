@@ -1,0 +1,56 @@
+.benefitCard {
+	width: 70%;
+}
+.textBox {
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin-block-start: calc(var(--index) * 0.5);
+	display: flex;
+	justify-content: center;
+	transition: 0.5s;
+}
+.textBoxInnerBox {
+	width: 90%;
+	color: var(--font-color-main);
+	font-family: var(--font-family-main);
+	font-size: var(--font-size-m);
+}
+.heading {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+.letter {
+	margin-block-start: calc(var(--index) * 1.5);
+	font-family: var(--font-family-heading);
+	display: inline-block;
+	color: var(--font-color-main);
+	font-size: var(--font-size-l);
+	transition: 0.3s;
+}
+
+.falling {
+	transform: translateY(2em);
+	opacity: 0;
+	color: #35f13f;
+}
+
+.iconWrapper {
+	transition: 0.3s;
+	filter: blur(1px);
+}
+
+.activeIcon {
+	filter: blur(0px);
+	scale: 1.05;
+}
+
+.contentBox {
+	position: relative;
+}
+
+.appearingText {
+	opacity: 1;
+}

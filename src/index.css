@@ -1,0 +1,41 @@
+:root {
+	--index: calc(1vw + 1vh);
+	/* palette */
+	--color-main: #000000;
+	--color-secondary: #111111;
+
+	--font-color-main: #ffffff;
+	--font-family-script: geoFont;
+	--font-family-main: golos;
+	--font-family-heading: visitor;
+
+	--font-size-xs: calc(var(--index) * 0.3);
+	--font-size-s: calc(var(--index) * 0.6);
+	--font-size-m: calc(var(--index) * 1);
+	--font-size-l: calc(var(--index) * 2);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+@font-face {
+	font-family: geoFont;
+	src: url(./assets/fonts/geo_font/GeoFont/GeoFont-Regular.otf);
+}
+@font-face {
+	font-family: golos;
+	src: url(./assets/fonts/Golos_Text/static/GolosText-Regular.ttf);
+}
+
+@font-face {
+	font-family: consolas;
+	src: url(./assets/fonts/Consolas/consolas.ttf);
+}
+
+@font-face {
+	font-family: visitor;
+	src: url(./assets/fonts/Visitor/Visitor.ttf);
+}
