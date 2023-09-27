@@ -1,0 +1,74 @@
+.rollingText {
+	height: calc(var(--font-size-xl) * 5);
+	overflow: hidden;
+}
+
+.letterBox {
+	display: inline-block;
+	position: relative;
+	// width: var(--font-size-xl);
+
+	animation-name: rollingLetters;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: 1;
+	transition: 0.2s;
+}
+.letter,
+.currentLetter {
+	font-size: var(--font-size-xl);
+	color: var(--font-color-secondary);
+	font-family: var(--font-family-main);
+}
+
+.letter {
+	animation-name: letterVanish;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+	animation-duration: 1s;
+
+	animation-delay: 4s;
+}
+
+.currentLetter {
+	animation-name: letterContrast;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+	animation-duration: 0.5s;
+}
+
+@-webkit-keyframes letterContrast {
+	from {
+		color: var(--font-color-secondary);
+		font-weight: 100;
+		text-shadow: 0 0 0px white;
+	}
+	50% {
+		color: var(--font-color-main);
+		text-shadow: 0 0 7px white;
+	}
+	to {
+		text-shadow: 0 0 0px white;
+		color: var(--font-color-main);
+		font-weight: bold;
+	}
+}
+
+@-webkit-keyframes letterVanish {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
+}
+
+@-webkit-keyframes rollingLetters {
+	from {
+		transform: translateY(0);
+	}
+	to {
+		transform: translateY(-57.5%);
+	}
+}

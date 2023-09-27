@@ -1,27 +1,32 @@
 import { FC, useState } from 'react';
 import styles from './BenefitCard.module.scss';
 import DynamicIcon from '../../../../../../components/DynamicIcon/DynamicIcon';
+import { IIcon } from '../../../../../../types/IIcon';
 
-interface IBenefitCardProps {}
+interface IBenefitCardProps {
+	text: string;
+	heading: string;
+	iconProps: IIcon;
+}
 
-const BenefitCard: FC<IBenefitCardProps> = ({}) => {
+const BenefitCard: FC<IBenefitCardProps> = ({ text, heading, iconProps }) => {
 	const [falling, setFalling] = useState(false);
 
 	const changeFall = () => {
 		setFalling(!falling);
 	};
 
-	let heading = 'Преимущество';
 	const headingAr = heading.split('');
 	return (
 		<div className={styles.benefitCard} onClick={changeFall}>
 			<div className={styles.innerBox}>
+				<span className={styles.flare} />
 				<div
 					className={`${styles.iconWrapper} ${
 						falling ? styles.activeIcon : ''
 					}`}
 				>
-					<DynamicIcon />
+					<DynamicIcon iconProps={iconProps} />
 				</div>
 				<div className={styles.contentBox}>
 					<div className={styles.heading}>
@@ -45,10 +50,7 @@ const BenefitCard: FC<IBenefitCardProps> = ({}) => {
 							falling ? styles.appearingText : ''
 						}`}
 					>
-						<div className={styles.textBoxInnerBox}>
-							asd asdasd asdas asd asd asdasd asdasd asda asda asd
-							asdsdsda asdasd asd
-						</div>
+						<div className={styles.textBoxInnerBox}>{text}</div>
 					</div>
 				</div>
 			</div>

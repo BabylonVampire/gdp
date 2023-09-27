@@ -7,7 +7,7 @@
 .innerBox {
 	width: 50%;
 	text-align: center;
-	font-size: var(--font-size-m);
+	font-size: var(--font-size-s);
 	// filter: blur(1px);
 	-webkit-touch-callout: none; /* iOS Safari */
 	-webkit-user-select: none; /* Safari */
@@ -17,14 +17,3 @@
 	user-select: none; /* Non-prefixed version, currently */
 	transition: 0.2s;
 }
-.iconLine {
-	white-space: pre;
-	font-family: var(--font-family-script);
-	// color: var(--font-color-main);
-	color: #35f13f;
-}
-
-// .innerBox:hover {
-// 	filter: blur(0px);
-// 	scale: 1.05;
-// }

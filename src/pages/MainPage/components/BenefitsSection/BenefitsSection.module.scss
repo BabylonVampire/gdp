@@ -1,4 +1,5 @@
 .benefitsSection {
+	padding: calc(var(--index) * 2) 0;
 	min-height: 50vh;
 	width: 100%;
 	display: flex;
@@ -16,13 +17,13 @@
 
 .galleryRight,
 .galleryLeft {
-	flex: 1;
+	width: 50%;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
 	align-items: center;
+	gap: calc(var(--index) * 15);
 }
 
 .galleryRight {
-	// padding-top: calc(var(--index) * 10);
+	padding-top: calc(var(--index) * 15);
 }

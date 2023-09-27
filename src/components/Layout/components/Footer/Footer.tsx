@@ -1,48 +1,35 @@
 import { FC, memo } from 'react';
 import styles from './Footer.module.scss';
 import { Link } from 'react-router-dom';
+import { ILink } from '../../../../types/ILink';
+import Logo from '../../../Logo/Logo';
 
-interface IFooterProps {}
+interface IFooterProps {
+	links: ILink[];
+}
 
-const Footer: FC<IFooterProps> = memo(() => {
+const Footer: FC<IFooterProps> = memo(({ links }) => {
 	const date = new Date().getFullYear();
 	return (
 		<footer className={styles.footer}>
 			<div className={styles.FooterContainer}>
 				<div className={styles.mainBox}>
 					<ul className={styles.optionsCol}>
-						<li>
-							<Link to="/" className={styles.link}>
-								Главная
-							</Link>
-						</li>
-						<li>
-							<Link to="/favor" className={styles.link}>
-								Услуги
-							</Link>
-						</li>
-						<li>
-							<Link to="/about" className={styles.link}>
-								О нас
-							</Link>
-						</li>
-						<li>
-							<Link to="/articles" className={styles.link}>
-								Статьи
-							</Link>
-						</li>
-						<li>
-							<Link to="/partners" className={styles.link}>
-								Партнерам
-							</Link>
-						</li>
-						<li>
-							<Link to="/contacts" className={styles.link}>
-								Контакты
-							</Link>
-						</li>
+						{links.map((link) => {
+							return (
+								<li>
+									<Link
+										to={link.link}
+										className={styles.link}
+									>
+										{link.heading}
+									</Link>
+								</li>
+							);
+						})}
 					</ul>
 					<ul className={styles.contactsCol}></ul>
+					<div className={styles.otherCol}>{/* <Logo /> */}</div>
 				</div>
 			</div>
 			<div className={styles.copyright}>

@@ -1,0 +1,108 @@
+$steps: 20;
+
+.container {
+	text-align: center;
+}
+
+.glitch {
+	position: relative;
+	color: var(--font-color-main);
+	font-family: var(--font-family-main);
+	font-weight: bold;
+	text-transform: uppercase;
+
+	&::before,
+	&::after {
+		content: attr(data-text);
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		overflow: hidden;
+		color: var(--font-color-main);
+		clip: rect(0, 900px, 0, 0);
+	}
+
+	&::before {
+		right: 2px;
+		text-shadow: 1px 0 green;
+		animation: glitch-effect 3s infinite linear alternate-reverse;
+	}
+
+	&::after {
+		left: 1px;
+		text-shadow: -1px 0 red;
+		animation: glitch-effect 2s infinite linear alternate-reverse;
+	}
+}
+
+@keyframes glitch-effect {
+	@for $i from 0 through $steps {
+		#{percentage($i*(1/$steps))} {
+			clip: rect(random(100) + px, 9999px, random(100) + px, 0);
+		}
+	}
+}
+
+// .glitch {
+// 	font-family: var(--font-family-main);
+// 	color: var(--font-color-main);
+// 	font-weight: bold;
+// 	position: relative;
+// 	text-shadow: 2px 0 0 var(--font-color-code), -2px -2px 0 #fc00ff,
+// 		1px 2px 0 #fffc00;
+// 	animation: glitch 725ms infinite;
+// 	text-align: start;
+// }
+
+// .glitchSpan__1,
+// .glitchSpan__2 {
+// 	position: absolute;
+// 	top: 0;
+// 	left: 0;
+// }
+
+// .glitchSpan__1 {
+// 	animation: glitch 500ms infinite;
+// 	clip-path: polygon(0 0, 100% 0, 100% 35%, 0 35%);
+// 	transform: translate(-4px, -2px);
+// 	opacity: 0.75;
+// }
+
+// .glitchSpan__2 {
+// 	animation: glitch 375ms infinite;
+// 	clip-path: polygon(0 65%, 100% 65%, 100% 100%, 0 100%);
+// 	transform: translate(4px, 2px);
+// 	opacity: 0.75;
+// }
+
+// @keyframes glitch {
+// 	0% {
+// 		text-shadow: 2px 0 0 var(--font-color-code), -2px -2px 0 #fc00ff,
+// 			1px 2px 0 #fffc00;
+// 	}
+// 	15% {
+// 		text-shadow: 2px 0 0 var(--font-color-code), -2px -2px 0 #fc00ff,
+// 			1px 2px 0 #fffc00;
+// 	}
+// 	16% {
+// 		text-shadow: -2px -2px 0 var(--font-color-code), 2px 2px 0 #fc00ff,
+// 			-1px -2px 0 #fffc00;
+// 	}
+// 	49% {
+// 		text-shadow: -2px -2px 0 var(--font-color-code), 2px 2px 0 #fc00ff,
+// 			-1px -2px 0 #fffc00;
+// 	}
+// 	50% {
+// 		text-shadow: 1px 2px 0 var(--font-color-code), 2px 0px 0 #fc00ff,
+// 			0px -2px 0 #fffc00;
+// 	}
+// 	99% {
+// 		text-shadow: 1px 2px 0 var(--font-color-code), 2px 0px 0 #fc00ff,
+// 			0px -2px 0 #fffc00;
+// 	}
+// 	100% {
+// 		text-shadow: -2px 0px 0 var(--font-color-code), -2px -1px 0 #fc00ff,
+// 			0px -2px 0 #fffc00;
+// 	}
+// }

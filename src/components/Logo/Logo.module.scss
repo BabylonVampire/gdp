@@ -1,0 +1,54 @@
+.logoBox {
+	color: #fff;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.__1,
+.__2,
+.__3 {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+}
+
+.__1 {
+	font-family: FortuneC;
+	color: #7b7b7b;
+	font-size: 1.75vh;
+	margin-inline-end: 1.5vh;
+	margin-block-start: 1.25vh;
+}
+
+.__2 {
+	font-family: RezaZulmiSans;
+	font-size: 3.25vh;
+	font-weight: 900;
+	filter: drop-shadow(0px 0px 10px #fff);
+	transition: 0.3s;
+}
+
+.__2:hover {
+	animation: shiningLogo 2s ease-in-out infinite forwards;
+}
+
+.__3 {
+	font-family: FortuneC;
+	color: #7b7b7b;
+	font-size: 2.2vh;
+	line-height: 2.2vh;
+}
+
+@keyframes shiningLogo {
+	0% {
+		filter: drop-shadow(0px 0px 10px #fff);
+	}
+	50% {
+		filter: drop-shadow(0px 0px 5px #fff);
+	}
+	100% {
+		filter: drop-shadow(0px 0px 10px #fff);
+	}
+}

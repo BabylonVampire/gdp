@@ -17,6 +17,7 @@
 .FooterContainer {
 	max-width: 1600px;
 	margin: 0 auto;
+	padding: calc(var(--index)) 0;
 	display: flex;
 	justify-content: center;
 }
@@ -25,7 +26,7 @@
 	min-height: 20vh;
 	color: var(--font-color-main);
 	font-family: var(--font-family-main);
-	flex-direction: column;
+	flex-direction: row;
 }
 .link {
 	text-decoration: none;
