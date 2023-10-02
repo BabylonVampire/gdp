@@ -1,28 +1,37 @@
 import { FC, useEffect, useState } from 'react';
 import styles from './TypingText.module.scss';
 
-interface ITypingTextProps {}
+interface ITypingTextProps {
+	text: string;
+	speed: number;
+	start?: boolean;
+	style?: React.CSSProperties | undefined;
+}
 
-const TypingText: FC<ITypingTextProps> = ({}) => {
-	const text =
-		'Война за независимость Сомалиленда (сомал. Dagaalkii Xoraynta Soomaaliland, букв. Сомалилендская освободительная война) — восстание, развязанное Сомалийским национальным движением (СНД)';
-	const [index, setIndex] = useState<number>(-1);
-	const [typingText, setTypingText] = useState<string>(text.charAt(0));
+const TypingText: FC<ITypingTextProps> = ({ text, speed, start, style }) => {
+	if (start === undefined) {
+		start = true;
+	}
+	text = '   ' + text;
+	const [index, setIndex] = useState<number>(0);
+	const [typingText, setTypingText] = useState<string>('');
 
 	useEffect(() => {
-		let timeout = setTimeout(() => {
-			setTypingText((prev) => [prev, text.charAt(index)].join(''));
-			setIndex((prev) => prev + 1);
-		}, 50);
-		if (index === text.length) {
-			window.clearTimeout(timeout);
+		if (start) {
+			let timeout = setTimeout(() => {
+				setTypingText((prev) => [prev, text.charAt(index)].join(''));
+				setIndex((prev) => prev + 1);
+			}, speed);
+			if (index === text.length) {
+				window.clearTimeout(timeout);
+			}
 		}
-	}, [index]);
+	}, [index, start]);
 
 	return (
 		<div className="TypingText">
 			<div className="innerContainer">
-				<p className={styles.textField}>
+				<p className={styles.textField} style={style}>
 					{typingText}
 					<span className={styles.corret}>|</span>
 				</p>

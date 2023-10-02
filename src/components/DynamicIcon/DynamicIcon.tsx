@@ -1,4 +1,4 @@
-import { FC, useState } from 'react';
+import { FC, memo, useCallback, useEffect, useState } from 'react';
 import styles from './DynamicIcon.module.scss';
 import { replaceAll } from './utils/replaceAll';
 import RenderIcon from './RenderIcon/RenderIcon';
@@ -8,13 +8,40 @@ interface IDynamicIconProps {
 	iconProps: IIcon;
 }
 
-const DynamicIcon: FC<IDynamicIconProps> = ({ iconProps }) => {
-	let icon = iconProps.icon;
-	const gradient = iconProps.gradient;
-	const [currentIcon, setIcon] = useState<string[]>(icon);
+const DynamicIcon: FC<IDynamicIconProps> = memo(({ iconProps }) => {
+	// let icon = iconProps.icon;
+	let gradient = iconProps.gradient;
+	// const [gradient, setGradient] = useState<string[]>([]);
+	const [currentIcon, setIcon] = useState<string[]>([]);
 	const [currentIndex, setIndex] = useState<number>(0);
 	const [newSymbol, setNewSymbol] = useState<number>(1);
 	const [currentSymbol, setSymbol] = useState<number>(0);
+
+	useEffect(() => {
+		setIcon(iconProps.icon);
+		// setGradient(iconProps.gradient);
+		return () => {
+			setIcon([]);
+			gradient = iconProps.gradient;
+			// setGradient([]);
+		};
+	}, [iconProps]);
+
+	const rerenderIcon = useCallback(() => {
+		return (
+			<RenderIcon
+				speed={iconProps.speed}
+				index={currentIndex}
+				currentIcon={currentIcon}
+				currentSymbol={currentSymbol}
+				newSymbol={newSymbol}
+				gradient={gradient}
+				changeSymbol={changeSymbol}
+				changeIcon={changeIcon}
+				setIndex={setIndex}
+			/>
+		);
+	}, [currentIndex, currentIcon, currentSymbol, newSymbol, iconProps]);
 
 	const changeIcon = () => {
 		setIcon(
@@ -35,20 +62,9 @@ const DynamicIcon: FC<IDynamicIconProps> = ({ iconProps }) => {
 
 	return (
 		<div className={styles.dynamicIcon}>
-			<div className={styles.innerBox}>
-				<RenderIcon
-					index={currentIndex}
-					currentIcon={currentIcon}
-					currentSymbol={currentSymbol}
-					newSymbol={newSymbol}
-					gradient={gradient}
-					changeSymbol={changeSymbol}
-					changeIcon={changeIcon}
-					setIndex={setIndex}
-				/>
-			</div>
+			<div className={styles.innerBox}>{rerenderIcon()}</div>
 		</div>
 	);
-};
+});
 
 export default DynamicIcon;

@@ -7,24 +7,24 @@ const Layout: FC<PropsWithChildren> = memo(({ children }) => {
 	const links = [
 		{
 			heading: 'Главная',
-			link: '/',
+			link: '#home',
 		},
 		{
 			heading: 'О Нас',
-			link: '/',
+			link: '#about',
 		},
 		{
 			heading: 'Услуги',
-			link: '/',
+			link: '#Services',
 		},
 		{
 			heading: 'Контакты',
-			link: '/',
+			link: '#contacts',
 		},
-		{
-			heading: 'Партнерам',
-			link: '/',
-		},
+		// {
+		// 	heading: 'Партнерам',
+		// 	link: '/',
+		// },
 	];
 	return (
 		<div className={styles.layout}>

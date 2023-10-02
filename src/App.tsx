@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router-dom';
+// import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Layout from './components/Layout/Layout';
 import MainPage from './pages/MainPage/MainPage';
@@ -6,9 +6,10 @@ import MainPage from './pages/MainPage/MainPage';
 function App() {
 	return (
 		<Layout>
-			<Routes>
+			<MainPage />
+			{/* <Routes>
 				<Route path="/" element={<MainPage />} />
-			</Routes>
+			</Routes> */}
 		</Layout>
 	);
 }

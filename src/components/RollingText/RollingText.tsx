@@ -1,14 +1,17 @@
-import { FC, useCallback, useEffect, useState } from 'react';
+import { FC, useCallback, useEffect, useMemo, useState } from 'react';
 import styles from './RollingText.module.scss';
 import GlitchedHeading from '../GlitchedHeading/GlitchedHeading';
+import { regExpToArray } from '../utils/regExpToArray';
+import { v4 } from 'uuid';
 
 interface IRollingTextProps {}
 
 const RollingText: FC<IRollingTextProps> = ({}) => {
 	const text = 'HEADING';
+	const alphabet = useMemo(() => regExpToArray(/[A-z]/), []);
 
 	const randomChar = useCallback(() => {
-		return String.fromCharCode(Math.random() * (122 - 97) + 97); // функция для генерации случайного символа
+		return alphabet[Math.floor(Math.random() * alphabet.length)]; // функция для генерации случайного символа
 	}, []);
 
 	const [displayGlitch, setDisplayGlitch] = useState<boolean>(false);
@@ -16,7 +19,7 @@ const RollingText: FC<IRollingTextProps> = ({}) => {
 	useEffect(() => {
 		setTimeout(() => {
 			setDisplayGlitch(true);
-		}, 6000);
+		}, 6500);
 	}, []);
 
 	interface IRollLineProps {
@@ -45,35 +48,98 @@ const RollingText: FC<IRollingTextProps> = ({}) => {
 							className={styles.letterBox}
 							style={{
 								animationDuration: `${animDur}s`,
-								marginLeft: animEnd ? '0px' : '20px',
 								transition: `1s`,
 								transform: animEnd
-									? 'translateY(-73%)'
+									? 'translateY(-73.5%)'
 									: 'translateY(-57.5%)',
 							}}
 						>
-							<div className={styles.letter}>
+							<div
+								className={styles.letter}
+								style={{
+									width: animEnd
+										? '0px'
+										: 'var(--font-size-xl)',
+									transition: 'all 2s ease-in-out 0s',
+								}}
+							>
 								{animEnd ? '.' : randomChar()}
 							</div>
-							<div className={styles.letter}>
+							<div
+								className={styles.letter}
+								style={{
+									width: animEnd
+										? '0px'
+										: 'var(--font-size-xl)',
+									transition: 'all 2s ease-in-out 0s',
+								}}
+							>
 								{animEnd ? '.' : randomChar()}
 							</div>
-							<div className={styles.letter}>
+							<div
+								className={styles.letter}
+								style={{
+									width: animEnd
+										? '0px'
+										: 'var(--font-size-xl)',
+									transition: 'all 2s ease-in-out 0s',
+								}}
+							>
 								{animEnd ? '.' : randomChar()}
 							</div>
-							<div className={styles.letter}>
+							<div
+								className={styles.letter}
+								style={{
+									width: animEnd
+										? '0px'
+										: 'var(--font-size-xl)',
+									transition: 'all 2s ease-in-out 0s',
+								}}
+							>
 								{animEnd ? '.' : randomChar()}
 							</div>
-							<div className={styles.letter}>
+							<div
+								className={styles.letter}
+								style={{
+									width: animEnd
+										? '0px'
+										: 'var(--font-size-xl)',
+									transition: 'all 2s ease-in-out 0s',
+								}}
+							>
 								{animEnd ? '.' : randomChar()}
 							</div>
-							<div className={styles.letter}>
+							<div
+								className={styles.letter}
+								style={{
+									width: animEnd
+										? '0px'
+										: 'var(--font-size-xl)',
+									transition: 'all 2s ease-in-out 0s',
+								}}
+							>
 								{animEnd ? '.' : randomChar()}
 							</div>
-							<div className={styles.letter}>
+							<div
+								className={styles.letter}
+								style={{
+									width: animEnd
+										? '0px'
+										: 'var(--font-size-xl)',
+									transition: 'all 2s ease-in-out 0s',
+								}}
+							>
 								{animEnd ? '.' : randomChar()}
 							</div>
-							<div className={styles.letter}>
+							<div
+								className={styles.letter}
+								style={{
+									width: animEnd
+										? '0px'
+										: 'var(--font-size-xl)',
+									transition: 'all 2s ease-in-out 0s',
+								}}
+							>
 								{animEnd ? '.' : randomChar()}
 							</div>
 							<pre
@@ -82,10 +148,26 @@ const RollingText: FC<IRollingTextProps> = ({}) => {
 							>
 								{letter}
 							</pre>
-							<div className={styles.letter}>
+							<div
+								className={styles.letter}
+								style={{
+									width: animEnd
+										? '0px'
+										: 'var(--font-size-xl)',
+									transition: 'all 2s ease-in-out 0s',
+								}}
+							>
 								{animEnd ? '.' : randomChar()}
 							</div>
-							<div className={styles.letter}>
+							<div
+								className={styles.letter}
+								style={{
+									width: animEnd
+										? '0px'
+										: 'var(--font-size-xl)',
+									transition: 'all 2s ease-in-out 0s',
+								}}
+							>
 								{animEnd ? '.' : randomChar()}
 							</div>
 						</div>

@@ -1,8 +1,8 @@
 import { FC, memo } from 'react';
 import styles from './Footer.module.scss';
-import { Link } from 'react-router-dom';
 import { ILink } from '../../../../types/ILink';
 import Logo from '../../../Logo/Logo';
+import { v4 } from 'uuid';
 
 interface IFooterProps {
 	links: ILink[];
@@ -17,13 +17,10 @@ const Footer: FC<IFooterProps> = memo(({ links }) => {
 					<ul className={styles.optionsCol}>
 						{links.map((link) => {
 							return (
-								<li>
-									<Link
-										to={link.link}
-										className={styles.link}
-									>
+								<li key={v4()}>
+									<a href={link.link} className={styles.link}>
 										{link.heading}
-									</Link>
+									</a>
 								</li>
 							);
 						})}

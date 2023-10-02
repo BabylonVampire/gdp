@@ -4,7 +4,7 @@
 	--color-main: #000000;
 	--color-secondary: #111111;
 
-	--color-frame-main: rgba(255, 255, 255, 0.05);
+	--color-frame-main: rgb(107 107 107 / 15%); /*rgba(255, 255, 255, 0.05);*/
 	--color-frame-shadow: rgba(255, 255, 255, 0.2);
 
 	--font-color-main: #ffffff;
@@ -55,12 +55,28 @@
 }
 /* SCROLL */
 
+/* COLOR OF SELECTION */
+::selection {
+	background: var(--font-color-code-secondary);
+	color: var(--font-color-main);
+	text-shadow: none;
+}
+
+::-moz-selection {
+	background: var(--font-color-code-secondary);
+	color: var(--font-color-main);
+	text-shadow: none;
+}
+/* COLOR OF SELECTION */
+
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	scroll-behavior: smooth;
 }
 
+/* FONT FAMILIES */
 @font-face {
 	font-family: geoFont;
 	src: url(./assets/fonts/geo_font/GeoFont/GeoFont-Regular.otf);
@@ -89,6 +105,7 @@
 	font-family: FortuneC;
 	src: url(./assets/fonts/FortuneC.ttf);
 }
+/* FONT FAMILIES */
 
 @media (max-width: 700px) {
 	:root {

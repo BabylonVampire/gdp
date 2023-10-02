@@ -19,4 +19,5 @@ export const skullIcon = {
 		'*****',
 	],
 	gradient: ['$', '8', '9', '0'],
+	speed: 50,
 };
