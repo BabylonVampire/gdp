@@ -1,7 +1,7 @@
 import { ITheme } from '../../types/ITheme';
 
 export const darkTheme: ITheme = {
-	id: 1,
+	id: 0,
 	name: 'dark',
 	style: {
 		colorMain: '#000',

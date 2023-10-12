@@ -1,5 +1,4 @@
 import { Dispatch, FC, SetStateAction, useEffect, useState } from 'react';
-import { WiMoonAltWaxingCrescent3, WiDaySunny } from 'react-icons/wi';
 import styles from './Switch.module.scss';
 
 interface ISwitchProps {
@@ -45,7 +44,17 @@ const Switch: FC<ISwitchProps> = ({
 						right: `${value ? -2.5 : 0}em`,
 					}}
 				>
-					{value ? <WiDaySunny /> : <WiMoonAltWaxingCrescent3 />}
+					{value ? (
+						iconOn ? (
+							iconOn
+						) : (
+							<></>
+						)
+					) : iconOff ? (
+						iconOff
+					) : (
+						<></>
+					)}
 				</div>
 			</div>
 		</div>

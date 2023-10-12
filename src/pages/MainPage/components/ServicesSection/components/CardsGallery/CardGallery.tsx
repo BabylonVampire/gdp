@@ -4,6 +4,8 @@ import BenefitCard from '../BenefitCard/BenefitCard';
 import styles from './CardsGallery.module.scss';
 import { ICard } from '../../../../../../types/ICard';
 import { v4 } from 'uuid';
+import { useAppSelector } from '../../../../../../store/hooks/redux';
+import { ITheme } from '../../../../../../types/ITheme';
 
 interface ICardGalleyProps {
 	cardPull: ICardPull;
@@ -12,6 +14,11 @@ interface ICardGalleyProps {
 const CardsGallery: FC<ICardGalleyProps> = memo(({ cardPull }) => {
 	const emptyPull = { name: '', cardPull: [], backGround: '' };
 	const [currentCardPull, setCardPull] = useState<ICardPull>(cardPull);
+	const { theme } = useAppSelector((state) => state.themeReducer);
+	const [currentTheme, setCurrentTheme] = useState<ITheme>(theme);
+	useEffect(() => {
+		setCurrentTheme(theme);
+	}, [theme]);
 	useEffect(() => {
 		setCardPull(cardPull);
 		return () => {
@@ -45,13 +52,18 @@ const CardsGallery: FC<ICardGalleyProps> = memo(({ cardPull }) => {
 	);
 
 	return (
-		<div
-			className={styles.galleriesBox}
-			style={{
-				background: currentCardPull.backGround,
-				backgroundSize: 'cover',
-			}}
-		>
+		<div className={styles.galleriesBox}>
+			<div
+				className={styles.backGround}
+				style={{
+					background: currentCardPull.backGround,
+					backgroundSize: 'cover',
+					filter:
+						currentTheme.name === 'dark'
+							? 'invert(0)'
+							: 'invert(1)',
+				}}
+			/>
 			<div className={styles.galleryLeft}>
 				{currentCardPull.cardPull.map((card, index) => {
 					return index % 2 === 0 ? (

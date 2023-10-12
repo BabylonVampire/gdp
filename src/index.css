@@ -5,6 +5,7 @@
 	--color-secondary: #111111;
 
 	--color-frame-main: rgb(107 107 107 / 15%);
+	--color-frame-main-active: rgba(255, 255, 255, 0.1);
 	--color-frame-shadow: rgba(255, 255, 255, 0.2);
 
 	--font-color-main: #ffffff;

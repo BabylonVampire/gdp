@@ -7,10 +7,10 @@ export const lightTheme: ITheme = {
 		colorMain: '#fff',
 		fontColorMain: '#000',
 		colorSecondary: '#111111',
-		colorFrameMain: 'rgb(107 107 107 / 15%)',
+		colorFrameMain: 'rgba(96, 96, 96, 0.2)',
 		colorFrameShadow: 'rgba(0, 0, 0, 0.2)',
 		fontColorSecondary: '#acacac',
-		fontColorCode: '#75abff',
-		fontColorCodeSecondary: '#547ab8',
+		fontColorCode: '#e84747',
+		fontColorCodeSecondary: '#a73939',
 	},
 };

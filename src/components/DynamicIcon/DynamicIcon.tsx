@@ -9,9 +9,7 @@ interface IDynamicIconProps {
 }
 
 const DynamicIcon: FC<IDynamicIconProps> = memo(({ iconProps }) => {
-	// let icon = iconProps.icon;
 	let gradient = iconProps.gradient;
-	// const [gradient, setGradient] = useState<string[]>([]);
 	const [currentIcon, setIcon] = useState<string[]>([]);
 	const [currentIndex, setIndex] = useState<number>(0);
 	const [newSymbol, setNewSymbol] = useState<number>(1);
@@ -19,11 +17,9 @@ const DynamicIcon: FC<IDynamicIconProps> = memo(({ iconProps }) => {
 
 	useEffect(() => {
 		setIcon(iconProps.icon);
-		// setGradient(iconProps.gradient);
 		return () => {
 			setIcon([]);
 			gradient = iconProps.gradient;
-			// setGradient([]);
 		};
 	}, [iconProps]);
 

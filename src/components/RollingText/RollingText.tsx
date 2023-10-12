@@ -2,7 +2,6 @@ import { FC, useCallback, useEffect, useMemo, useState } from 'react';
 import styles from './RollingText.module.scss';
 import GlitchedHeading from '../GlitchedHeading/GlitchedHeading';
 import { regExpToArray } from '../utils/regExpToArray';
-import { v4 } from 'uuid';
 
 interface IRollingTextProps {}
 
@@ -55,122 +54,30 @@ const RollingText: FC<IRollingTextProps> = ({}) => {
 									: 'translateY(-57.5%)',
 							}}
 						>
-							<div
-								className={styles.letter}
-								style={{
-									width: animEnd
-										? '0px'
-										: 'var(--font-size-xl)',
-									transition: 'all 2s ease-in-out 0s',
-								}}
-							>
-								{animEnd ? '.' : randomChar()}
-							</div>
-							<div
-								className={styles.letter}
-								style={{
-									width: animEnd
-										? '0px'
-										: 'var(--font-size-xl)',
-									transition: 'all 2s ease-in-out 0s',
-								}}
-							>
-								{animEnd ? '.' : randomChar()}
-							</div>
-							<div
-								className={styles.letter}
-								style={{
-									width: animEnd
-										? '0px'
-										: 'var(--font-size-xl)',
-									transition: 'all 2s ease-in-out 0s',
-								}}
-							>
-								{animEnd ? '.' : randomChar()}
-							</div>
-							<div
-								className={styles.letter}
-								style={{
-									width: animEnd
-										? '0px'
-										: 'var(--font-size-xl)',
-									transition: 'all 2s ease-in-out 0s',
-								}}
-							>
-								{animEnd ? '.' : randomChar()}
-							</div>
-							<div
-								className={styles.letter}
-								style={{
-									width: animEnd
-										? '0px'
-										: 'var(--font-size-xl)',
-									transition: 'all 2s ease-in-out 0s',
-								}}
-							>
-								{animEnd ? '.' : randomChar()}
-							</div>
-							<div
-								className={styles.letter}
-								style={{
-									width: animEnd
-										? '0px'
-										: 'var(--font-size-xl)',
-									transition: 'all 2s ease-in-out 0s',
-								}}
-							>
-								{animEnd ? '.' : randomChar()}
-							</div>
-							<div
-								className={styles.letter}
-								style={{
-									width: animEnd
-										? '0px'
-										: 'var(--font-size-xl)',
-									transition: 'all 2s ease-in-out 0s',
-								}}
-							>
-								{animEnd ? '.' : randomChar()}
-							</div>
-							<div
-								className={styles.letter}
-								style={{
-									width: animEnd
-										? '0px'
-										: 'var(--font-size-xl)',
-									transition: 'all 2s ease-in-out 0s',
-								}}
-							>
-								{animEnd ? '.' : randomChar()}
-							</div>
-							<pre
-								className={styles.currentLetter}
-								style={{ animationDelay: `${animDur}s` }}
-							>
-								{letter}
-							</pre>
-							<div
-								className={styles.letter}
-								style={{
-									width: animEnd
-										? '0px'
-										: 'var(--font-size-xl)',
-									transition: 'all 2s ease-in-out 0s',
-								}}
-							>
-								{animEnd ? '.' : randomChar()}
-							</div>
-							<div
-								className={styles.letter}
-								style={{
-									width: animEnd
-										? '0px'
-										: 'var(--font-size-xl)',
-									transition: 'all 2s ease-in-out 0s',
-								}}
-							>
-								{animEnd ? '.' : randomChar()}
-							</div>
+							{[...Array(11)].map((l, i) => {
+								return i != 8 ? (
+									<div
+										className={styles.letter}
+										style={{
+											width: animEnd
+												? '0px'
+												: 'var(--font-size-xl)',
+											transition: 'all 2s ease-in-out 0s',
+										}}
+									>
+										{animEnd ? '.' : randomChar()}
+									</div>
+								) : (
+									<pre
+										className={styles.currentLetter}
+										style={{
+											animationDelay: `${animDur}s`,
+										}}
+									>
+										{letter}
+									</pre>
+								);
+							})}
 						</div>
 					);
 				})}

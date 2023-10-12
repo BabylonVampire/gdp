@@ -36,7 +36,7 @@ const RenderIcon: FC<IRenderIconProps> = memo(
 		}, [gradient, currentIcon]);
 
 		const changeIndex = (index: number) => {
-			timeOut = setTimeout(() => {
+			timeOut = window.setTimeout(() => {
 				if (index === 0) {
 					changeIcon();
 					changeSymbol();

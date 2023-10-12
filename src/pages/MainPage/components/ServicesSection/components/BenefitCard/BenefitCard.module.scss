@@ -13,7 +13,7 @@
 	background-color: var(--color-frame-main);
 	box-shadow: inset 0 0 7px 0 var(--color-frame-shadow), 0 0 7px 0px #000;
 	border-radius: 7px;
-	backdrop-filter: blur(3px);
+	backdrop-filter: blur(5px);
 	overflow: hidden;
 	& > * {
 		flex: 1;
@@ -31,7 +31,7 @@
 }
 .textBoxInnerBox {
 	width: 90%;
-	color: #fff;
+	color: var(--font-color-main);
 	font-family: var(--font-family-main);
 	font-size: var(--font-size-m);
 }
@@ -44,7 +44,7 @@
 	margin-block-start: calc(var(--index) * 1.5);
 	font-family: var(--font-family-heading);
 	display: inline-block;
-	color: #fff;
+	color: var(--font-color-main);
 	font-size: var(--font-size-l);
 	transition: 0.3s;
 

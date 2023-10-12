@@ -2,16 +2,18 @@ import { FC, memo } from 'react';
 import styles from './Footer.module.scss';
 import { FaTelegram, FaYoutube, FaInstagram } from 'react-icons/fa6';
 import { ILink } from '../../../../types/ILink';
-import Logo from '../../../Logo/Logo';
+// import Logo from '../../../Logo/Logo';
 import { v4 } from 'uuid';
 
 interface IFooterProps {
 	links: ILink[];
-	phones: string[];
-	emails: string[];
+	contacts: {
+		phones: string[];
+		emails: string[];
+	};
 }
 
-const Footer: FC<IFooterProps> = memo(({ links, phones, emails }) => {
+const Footer: FC<IFooterProps> = memo(({ links, contacts }) => {
 	const date = new Date().getFullYear();
 	return (
 		<footer className={styles.footer}>
@@ -34,14 +36,14 @@ const Footer: FC<IFooterProps> = memo(({ links, phones, emails }) => {
 					<ul className={styles.contactsCol}>
 						<div className={styles.colHeading}>Контакты</div>
 						<div className={styles.divider} />
-						{phones.map((phone) => {
+						{contacts.phones.map((phone) => {
 							return (
 								<li className={styles.contact} key={v4()}>
 									{phone}
 								</li>
 							);
 						})}
-						{emails.map((email) => {
+						{contacts.emails.map((email) => {
 							return (
 								<li className={styles.contact} key={v4()}>
 									{email}

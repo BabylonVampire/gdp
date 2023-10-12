@@ -24,7 +24,10 @@
 	"include": ["src"],
 	"baseUrl": "src/",
 	"paths": {
-		"@components/*": ["src/components/*"]
+		"@components/*": ["src/components/*"],
+		"@cusTypes/*": ["src/types/*"],
+		"@db/*": ["src/db/*"],
+		"@store": ["src/store/*"]
 	},
 	"references": [{ "path": "./tsconfig.node.json" }]
 }

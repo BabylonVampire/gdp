@@ -33,7 +33,7 @@ const TypingText: FC<ITypingTextProps> = ({ text, speed, start, style }) => {
 			<div className="innerContainer">
 				<p className={styles.textField} style={style}>
 					{typingText}
-					<span className={styles.corret}>|</span>
+					<span className={styles.caret}>|</span>
 				</p>
 			</div>
 		</div>
