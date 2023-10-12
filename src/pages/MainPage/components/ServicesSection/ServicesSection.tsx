@@ -1,34 +1,16 @@
-import { FC, useState } from 'react';
+import { FC } from 'react';
 import styles from './ServicesSection.module.scss';
-import { v4 } from 'uuid';
+import Tabs from '../../../../components/Tabs/Tabs';
+import { ITab } from '../../../../types/ITab';
 
 interface IServicesSectionProps {
-	components: { component: React.ReactNode; name: string }[];
+	components: ITab[];
 }
 
 const ServicesSection: FC<IServicesSectionProps> = ({ components }) => {
-	const [component, setComponent] = useState<React.ReactNode>(
-		components[0].component
-	);
-
 	return (
 		<div className={styles.ServicesSection} id="Services">
-			<div className={styles.innerBox}>
-				<div className={styles.cardPullSelection}>
-					{components.map((com) => {
-						return (
-							<div
-								key={v4()}
-								className={styles.changePullBtn}
-								onClick={() => setComponent(com.component)}
-							>
-								{com.name}
-							</div>
-						);
-					})}
-				</div>
-				{component}
-			</div>
+			<Tabs tabs={components} />
 		</div>
 	);
 };
