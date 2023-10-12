@@ -10,7 +10,7 @@ interface ICardGalleyProps {
 }
 
 const CardsGallery: FC<ICardGalleyProps> = memo(({ cardPull }) => {
-	const emptyPull = { name: '', cardPull: [], backGroundColor: '' };
+	const emptyPull = { name: '', cardPull: [], backGround: '' };
 	const [currentCardPull, setCardPull] = useState<ICardPull>(cardPull);
 	useEffect(() => {
 		setCardPull(cardPull);
@@ -47,7 +47,10 @@ const CardsGallery: FC<ICardGalleyProps> = memo(({ cardPull }) => {
 	return (
 		<div
 			className={styles.galleriesBox}
-			style={{ background: currentCardPull.backGroundColor }}
+			style={{
+				background: currentCardPull.backGround,
+				backgroundSize: 'cover',
+			}}
 		>
 			<div className={styles.galleryLeft}>
 				{currentCardPull.cardPull.map((card, index) => {

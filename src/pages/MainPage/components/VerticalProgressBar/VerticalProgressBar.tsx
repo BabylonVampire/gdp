@@ -19,7 +19,7 @@ const VerticalProgressBar: FC<IVerticalProgressBarProps> = ({ points }) => {
 						let pos = index % 2 === 0;
 						return pos ? (
 							<div
-								key={v4()}
+								key={point.point.heading + `${index}`}
 								className={styles.point}
 								style={{
 									textAlign: 'end',
@@ -28,7 +28,8 @@ const VerticalProgressBar: FC<IVerticalProgressBarProps> = ({ points }) => {
 								<div
 									className={styles.backDrop}
 									style={{
-										transition: 'width 0.5s',
+										transition:
+											'transition: width 0.5s, background-color 0.3s',
 										width:
 											clickState === index
 												? '50%'
@@ -68,7 +69,7 @@ const VerticalProgressBar: FC<IVerticalProgressBarProps> = ({ points }) => {
 							</div>
 						) : (
 							<div
-								key={v4()}
+								key={point.point.heading + `${index}`}
 								className={styles.text}
 								style={{
 									textAlign: 'end',
@@ -112,7 +113,7 @@ const VerticalProgressBar: FC<IVerticalProgressBarProps> = ({ points }) => {
 						let pos = index % 2 === 1;
 						return pos ? (
 							<div
-								key={v4()}
+								key={point.point.heading + `${index}`}
 								className={styles.point}
 								style={{
 									textAlign: 'start',
@@ -121,7 +122,8 @@ const VerticalProgressBar: FC<IVerticalProgressBarProps> = ({ points }) => {
 								<div
 									className={styles.backDrop}
 									style={{
-										transition: 'width 0.5s',
+										transition:
+											'transition: width 0.5s, background-color 0.3s',
 										width:
 											clickState === index
 												? '50%'
@@ -161,7 +163,7 @@ const VerticalProgressBar: FC<IVerticalProgressBarProps> = ({ points }) => {
 							</div>
 						) : (
 							<div
-								key={v4()}
+								key={point.point.heading + `${index}`}
 								className={styles.text}
 								style={{
 									textAlign: 'start',

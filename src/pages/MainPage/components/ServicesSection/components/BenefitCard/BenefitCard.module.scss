@@ -31,7 +31,7 @@
 }
 .textBoxInnerBox {
 	width: 90%;
-	color: var(--font-color-main);
+	color: #fff;
 	font-family: var(--font-family-main);
 	font-size: var(--font-size-m);
 }
@@ -44,7 +44,7 @@
 	margin-block-start: calc(var(--index) * 1.5);
 	font-family: var(--font-family-heading);
 	display: inline-block;
-	color: var(--font-color-main);
+	color: #fff;
 	font-size: var(--font-size-l);
 	transition: 0.3s;
 
