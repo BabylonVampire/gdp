@@ -1,0 +1,28 @@
+.heading {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	margin: calc(var(--index)) 0;
+}
+.headingWrapper {
+	padding: calc(var(--index));
+	text-align: center;
+	width: 40%;
+	height: 100%;
+	border-radius: 7px;
+	background-color: var(--color-frame-main);
+	box-shadow: inset 0 0 7px 0 var(--color-frame-shadow);
+	text-transform: uppercase;
+	backdrop-filter: blur(3px);
+}
+
+.headingText {
+	font-size: var(--font-size-l);
+	color: var(--font-color-main);
+	font-family: var(--font-family-heading);
+}
+.headingDescription {
+	font-size: var(--font-size-m);
+	color: var(--font-color-secondary);
+	font-family: var(--font-family-main);
+}
