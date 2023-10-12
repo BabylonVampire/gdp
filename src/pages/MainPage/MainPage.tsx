@@ -13,6 +13,7 @@ import {
 	servicesCardsWeb,
 } from '../../db/servicesCards';
 import ContactSection from './components/ContactSection/ContactSection';
+import Heading from '../../components/Heading/Heading';
 
 interface IMainPageProps {}
 
@@ -57,32 +58,44 @@ const MainPage: FC<IMainPageProps> = ({}) => {
 		web: {
 			name: '1',
 			cardPull: servicesCardsWeb,
-			backGroundColor: '#111111',
+			backGround: 'url(/src/assets/background/backService_2.gif)',
 		},
 		design: {
 			name: '2',
 			cardPull: servicesCardsDesign,
-			backGroundColor: 'rgb(23 12 50)',
+			backGround: 'rgb(23 12 50)',
 		},
 		video: {
 			name: '3',
 			cardPull: servicesCardsVideo,
-			backGroundColor: 'rgb(39 37 15)',
+			backGround: 'rgb(39 37 15)',
 		},
 	};
 
 	const components = [
-		{ component: <CardsGallery cardPull={cardPulls.web} />, name: '1' },
-		{ component: <CardsGallery cardPull={cardPulls.design} />, name: '2' },
-		{ component: <CardsGallery cardPull={cardPulls.video} />, name: '3' },
+		{
+			component: <CardsGallery cardPull={cardPulls.web} />,
+			name: cardPulls.web.name,
+		},
+		{
+			component: <CardsGallery cardPull={cardPulls.design} />,
+			name: cardPulls.design.name,
+		},
+		{
+			component: <CardsGallery cardPull={cardPulls.video} />,
+			name: cardPulls.video.name,
+		},
 	];
 
 	return (
 		<main className={styles.mainPage}>
 			<HeroSection />
 			<AboutSection />
+			<Heading text={'Услуги'} />
 			<ServicesSection components={components} />
+			{/* <Heading text={'Схема сотрудничества'} /> */}
 			<VerticalProgressBar points={points} />
+			{/* <Heading text={'Контакты'} /> */}
 			<ContactSection />
 		</main>
 	);
