@@ -4,7 +4,7 @@
 	--color-main: #000000;
 	--color-secondary: #111111;
 
-	--color-frame-main: rgb(107 107 107 / 15%); /*rgba(255, 255, 255, 0.05);*/
+	--color-frame-main: rgb(107 107 107 / 15%);
 	--color-frame-shadow: rgba(255, 255, 255, 0.2);
 
 	--font-color-main: #ffffff;
@@ -16,12 +16,13 @@
 	/* font-families */
 	--font-family-script: geoFont;
 	--font-family-main: golos;
-	--font-family-heading: visitor;
+	--font-family-heading: visitor; /*visitor, major*/
 	/* font-families */
 
 	/* font-sizes */
 	--font-size-xs: calc(var(--index) * 0.3);
 	--font-size-s: calc(var(--index) * 0.6);
+	--font-size-sm: calc(var(--index) * 0.8);
 	--font-size-m: calc(var(--index) * 1);
 	--font-size-l: calc(var(--index) * 2);
 	--font-size-xl: calc(var(--index) * 3);
@@ -31,7 +32,7 @@
 	--flare-gradient: linear-gradient(
 		45deg,
 		rgba(255, 255, 255, 0) 38%,
-		rgba(255, 255, 255, 0.1) 49%,
+		var(--color-frame-shadow) 49%,
 		rgba(255, 255, 255, 0) 60%
 	);
 	/* OTHER */
@@ -74,6 +75,7 @@
 	padding: 0;
 	box-sizing: border-box;
 	scroll-behavior: smooth;
+	transition: 0.3s;
 }
 
 /* FONT FAMILIES */
@@ -87,24 +89,15 @@
 }
 
 @font-face {
-	font-family: consolas;
-	src: url(./assets/fonts/Consolas/consolas.ttf);
-}
-
-@font-face {
 	font-family: visitor;
 	src: url(./assets/fonts/Visitor/Visitor.ttf);
 }
 
 @font-face {
-	font-family: RezaZulmiSans;
-	src: url(./assets/fonts/RezaZulmiSans.ttf);
+	font-family: cornetia;
+	src: url(./assets/fonts/cornerita/Cornerita/Cornerita-VF.ttf);
 }
 
-@font-face {
-	font-family: FortuneC;
-	src: url(./assets/fonts/FortuneC.ttf);
-}
 /* FONT FAMILIES */
 
 @media (max-width: 700px) {
