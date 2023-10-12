@@ -41,10 +41,11 @@ const RollingText: FC<IRollingTextProps> = ({}) => {
 					transition: '1s',
 				}}
 			>
-				{text.split('').map((letter) => {
+				{text.split('').map((letter, index) => {
 					let animDur = Math.random() * 3 + 1;
 					return (
 						<div
+							key={letter + `${index}`}
 							className={styles.letterBox}
 							style={{
 								animationDuration: `${animDur}s`,
