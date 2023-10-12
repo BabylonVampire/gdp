@@ -5,7 +5,7 @@
 }
 .copyright {
 	min-height: 3vh;
-	color: var(--font-color-main);
+	color: #fff;
 	font-family: var(--font-family-main);
 	background-color: #000000;
 	display: flex;
@@ -15,6 +15,7 @@
 	}
 }
 .FooterContainer {
+	width: calc(100vw - 6px);
 	max-width: 1600px;
 	margin: 0 auto;
 	padding: calc(var(--index)) 0;
@@ -22,27 +23,68 @@
 	justify-content: center;
 }
 .mainBox {
+	width: 80%;
 	display: flex;
 	min-height: 20vh;
-	color: var(--font-color-main);
+	color: #fff;
 	font-family: var(--font-family-main);
 	flex-direction: row;
+	& > * {
+		flex: 1;
+	}
 }
-.link {
-	text-decoration: none;
-	color: var(--font-color-main);
+.colHeading {
+	color: #fff;
 	font-size: var(--font-size-m);
+	font-weight: bold;
+}
+.link,
+.contact,
+.option {
+	list-style-type: disc;
+	text-decoration: none;
+	color: var(--font-color-secondary);
+	font-size: var(--font-size-sm);
+}
+.outLink {
+	margin: calc(var(--index) * 0.5) calc(var(--index) * 0.3);
+	color: #fff;
+	font-size: var(--font-size-l);
+	display: inline-block;
+	cursor: pointer;
 }
 .options {
 	display: flex;
 	flex-direction: row;
 }
-.optionsCol {
+
+.optionsCol,
+.contactsCol {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	> * {
 		margin: calc(var(--index) * 0.2);
+	}
+}
+
+.optionsCol {
+	& > * {
+		list-style: disc;
+		list-style-position: inside;
+	}
+}
+.contactsCol,
+.linksCol {
+	& > * {
 		list-style: none;
 	}
+}
+
+.divider {
+	border-radius: 7px;
+	width: 20%;
+	height: 4px;
+	background-color: var(--font-color-code);
+	margin: calc(var(--index) * 0.3);
 }
