@@ -42,6 +42,7 @@ const Switch: FC<ISwitchProps> = ({
 					className={styles.circle}
 					style={{
 						right: `${value ? -2.5 : 0}em`,
+						transition: '0.3s',
 					}}
 				>
 					{value ? (

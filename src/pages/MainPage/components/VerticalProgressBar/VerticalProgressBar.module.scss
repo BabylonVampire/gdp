@@ -84,6 +84,7 @@
 	position: absolute;
 	height: calc(var(--index) * 3.5);
 	background-color: var(--color-main);
+	transition: 0.3s;
 }
 
 .text {

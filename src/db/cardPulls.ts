@@ -13,11 +13,11 @@ export const cardPulls = {
 	design: {
 		name: '2',
 		cardPull: servicesCardsDesign,
-		backGround: 'rgb(23 12 50)',
+		backGround: 'url(/src/assets/background/backService_2.gif)',
 	},
 	video: {
 		name: '3',
 		cardPull: servicesCardsVideo,
-		backGround: 'rgb(39 37 15)',
+		backGround: 'url(/src/assets/background/backService_2.gif)',
 	},
 };
