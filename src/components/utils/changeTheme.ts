@@ -7,6 +7,7 @@ export const changeTheme = (theme: ITheme) => {
 		fontColorMain: '--font-color-main',
 		colorSecondary: '--color-secondary',
 		colorFrameMain: '--color-frame-main',
+		colorFrameMainActive: '--color-frame-main-active',
 		colorFrameShadow: '--color-frame-shadow',
 		fontColorSecondary: '--font-color-secondary',
 		fontColorCode: '--font-color-code',

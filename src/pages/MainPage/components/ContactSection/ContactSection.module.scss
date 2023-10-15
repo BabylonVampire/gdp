@@ -1,6 +1,7 @@
 .contactSection {
 	width: 100%;
-	height: 50vh;
+	min-height: 50vh;
+	padding: calc(var(--index) * 2) 0;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -9,6 +10,12 @@
 .innerBox {
 	width: 80%;
 	height: 90%;
+	display: flex;
+	flex-direction: row;
+	gap: calc(var(--index));
+}
+
+.contactBox {
 	display: flex;
 	flex-direction: column;
 	gap: calc(var(--index));
@@ -19,17 +26,117 @@
 	font-size: var(--font-size-l);
 }
 
-.emailIcon {
+.emailIcon,
+.linkIcon {
 	border-radius: 7px;
 	font-size: var(--font-size-xl);
 }
 
 .phones,
-.email {
+.email,
+.socialNetwork {
 	gap: calc(var(--index));
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-start;
 	align-items: center;
 	transition: 0.3s;
+}
+
+.socialNetwork {
+	width: 100%;
+	position: relative;
+	display: flex;
+	flex-direction: row;
+}
+
+.links {
+	position: relative;
+	display: flex;
+	height: 100%;
+	align-items: center;
+}
+
+.telegram {
+	position: absolute;
+	border: calc(var(--index) * 2) solid transparent;
+	border-left: calc(var(--index) * 4) solid #38a0f3;
+	transition: opacity 0.4s ease-in-out, left 0.4s ease-in-out, scale 0.2s,
+		filter 0.2s;
+}
+
+.telegramIconGap {
+	position: absolute;
+	top: calc(var(--index) * -0.4);
+	right: calc(var(--index) * 1.7);
+	border: calc(var(--index) * 0.5) solid transparent;
+	border-left: calc(var(--index) * 2) solid var(--color-main);
+	transition: 0.3s;
+}
+
+.instagram {
+	position: absolute;
+	display: flex;
+	width: calc(var(--index) * 4);
+	height: calc(var(--index) * 4);
+	background: linear-gradient(
+		45deg,
+		#f09433 0%,
+		#e6683c 25%,
+		#dc2743 50%,
+		#cc2366 75%,
+		#bc1888 100%
+	);
+	align-items: center;
+	justify-content: center;
+	transition: opacity 0.3s ease-in-out, left 0.3s ease-in-out, scale 0.2s,
+		filter 0.2s;
+}
+.bigCircle {
+	width: calc(var(--index) * 2);
+	height: calc(var(--index) * 2);
+	border: solid calc(var(--index) * 0.3);
+	border-color: var(--color-main);
+	transition: 0.3s;
+	border-radius: 50%;
+}
+
+.smallCircle {
+	width: calc(var(--index));
+	height: calc(var(--index));
+	border: solid calc(var(--index) * 0.2);
+	border-color: var(--color-main);
+	transition: 0.3s;
+	position: absolute;
+	right: calc(var(--index) * 0.2);
+	top: calc(var(--index) * 0.2);
+	border-radius: 50%;
+}
+
+.youtube {
+	position: absolute;
+	height: calc(var(--index) * 4);
+	width: calc(var(--index) * 6);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #f00;
+	transition: opacity 0.6s ease-in-out, scale 0.2s, filter 0.2s;
+}
+.triangle {
+	border: calc(var(--index) * 0.75) solid transparent;
+	border-left: calc(var(--index) * 1.5) solid #fff;
+}
+
+.telegram,
+.instagram,
+.youtube {
+	cursor: pointer;
+}
+
+.youtube:hover,
+.instagram:hover,
+.telegram:hover {
+	scale: 1.05;
+	filter: brightness(1.5);
 }

@@ -8,8 +8,9 @@
 	box-shadow: inset 0 0 7px 0 var(--color-frame-shadow);
 	backdrop-filter: blur(3px);
 	z-index: 10;
-	animation: appearingHeader 1s ease-in-out 1 forwards;
+	animation: appearingHeader 1s ease-in-out 1;
 	justify-content: space-between;
+	transition: 0.3s;
 }
 
 .flare {
@@ -43,8 +44,38 @@
 	font-size: var(--font-size-m);
 	transition: 0.2s;
 }
+
+.pcDisplay {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.mobileDisplay {
+	display: none;
+	width: 100%;
+	height: 100%;
+	flex-direction: row;
+	justify-content: flex-end;
+	align-items: center;
+}
+
 .link:hover {
 	scale: 1.075;
+}
+
+.openBurger {
+	font-size: 3em;
+	border: none;
+	height: 100%;
+	width: auto;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: transparent;
+	color: var(--font-color-main);
+	margin: 0 0.4em;
 }
 
 .header:hover {
@@ -72,5 +103,14 @@
 
 	to {
 		top: 0;
+	}
+}
+
+@media (max-width: 1000px) {
+	.pcDisplay {
+		display: none;
+	}
+	.mobileDisplay {
+		display: flex;
 	}
 }

@@ -62,7 +62,7 @@
 .contactsCol {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: flex-start;
 	> * {
 		margin: calc(var(--index) * 0.2);
 	}

@@ -25,6 +25,7 @@ const Button: FC<PropsWithChildren<IButtonProps>> = ({
 			])}
 			{...rest}
 		>
+			<span className={styles.flare} />
 			{children}
 		</button>
 	);

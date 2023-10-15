@@ -1,4 +1,4 @@
-.layout {
+.mainLayoutBox {
 	position: relative;
 	width: 100%;
 	min-height: 100vh;
@@ -7,5 +7,5 @@
 	background-size: contain;
 	background-repeat: repeat;
 	overflow: hidden;
-	transition: background-color 0.3s;
+	transition: background-color 0.3s, right 0.3s;
 }

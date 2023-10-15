@@ -4,6 +4,7 @@ export interface IThemeStyle {
 	fontColorMain: string;
 	colorSecondary: string;
 	colorFrameMain: string;
+	colorFrameMainActive: string;
 	colorFrameShadow: string;
 	fontColorSecondary: string;
 	fontColorCode: string;

@@ -10,4 +10,32 @@
 	transition: 0.35s;
 	border-radius: 7px;
 	border: none;
+	position: relative;
+	overflow: hidden;
+}
+
+.flare {
+	position: absolute;
+	top: -50%;
+	height: 200%;
+	width: 200%;
+	pointer-events: none;
+}
+
+.Button:hover {
+	.flare {
+		animation: flareAnimation;
+		left: -180%;
+		background: var(--flare-gradient);
+		animation: flareAnimation 0.75s 0.5s 1 linear;
+	}
+}
+
+@keyframes flareAnimation {
+	0% {
+		left: -150%;
+	}
+	100% {
+		left: 150%;
+	}
 }

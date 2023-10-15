@@ -9,12 +9,15 @@ import { useAppDispatch } from '@store/hooks/redux';
 import { themeSlice } from '@store/reducers/ThemeSlice';
 import { ILink } from '../../../../types/ILink';
 import { WiMoonAltWaxingCrescent3, WiDaySunny } from 'react-icons/wi';
+import { HiOutlineMenu } from 'react-icons/hi';
 
 interface IHeaderProps {
 	links: ILink[];
+	burgerState: boolean;
+	burgerCallBack: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const Header: FC<IHeaderProps> = ({ links }) => {
+const Header: FC<IHeaderProps> = ({ links, burgerCallBack, burgerState }) => {
 	const [switchPosition, setSwitchPosition] = useState<boolean | undefined>(
 		false
 	);
@@ -30,24 +33,43 @@ const Header: FC<IHeaderProps> = ({ links }) => {
 	};
 
 	return (
-		<div className={styles.header}>
+		<div
+			className={styles.header}
+			style={{
+				top: burgerState ? '-5em' : '0',
+			}}
+		>
 			<span className={styles.flare} />
-			<Switch
-				setValue={setSwitchPosition}
-				value={switchPosition}
-				onClick={themeChanger}
-				iconOn={<WiDaySunny />}
-				iconOff={<WiMoonAltWaxingCrescent3 />}
-			/>
-			{/* <Logo /> */}
-			<div className={styles.linkBox}>
-				{links.map((link) => {
-					return (
-						<a className={styles.link} href={link.link} key={v4()}>
-							{link.heading}
-						</a>
-					);
-				})}
+			<div className={styles.mobileDisplay}>
+				<button
+					className={styles.openBurger}
+					onClick={() => burgerCallBack((prev) => !prev)}
+				>
+					<HiOutlineMenu />
+				</button>
+			</div>
+			<div className={styles.pcDisplay}>
+				<Switch
+					setValue={setSwitchPosition}
+					value={switchPosition}
+					onClick={themeChanger}
+					iconOn={<WiDaySunny />}
+					iconOff={<WiMoonAltWaxingCrescent3 />}
+				/>
+				{/* <Logo /> */}
+				<div className={styles.linkBox}>
+					{links.map((link) => {
+						return (
+							<a
+								className={styles.link}
+								href={link.link}
+								key={v4()}
+							>
+								{link.heading}
+							</a>
+						);
+					})}
+				</div>
 			</div>
 		</div>
 	);
