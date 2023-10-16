@@ -7,6 +7,7 @@
 	background-color: var(--color-frame-main);
 	box-shadow: inset 0 0 7px 0 var(--color-frame-shadow);
 	backdrop-filter: blur(3px);
+	-webkit-backdrop-filter: blur(3px);
 	z-index: 10;
 	animation: appearingHeader 1s ease-in-out 1;
 	justify-content: space-between;

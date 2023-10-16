@@ -1,4 +1,4 @@
-import { FC, PropsWithChildren, memo, useState } from 'react';
+import { FC, PropsWithChildren, memo, useEffect, useState } from 'react';
 import styles from './layout.module.scss';
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
@@ -9,6 +9,11 @@ import BurgerMenu from './components/Header/BurgerMenu/BurgerMenu';
 
 const Layout: FC<PropsWithChildren> = memo(({ children }) => {
 	const [burger, setBurger] = useState<boolean>(false);
+
+	useEffect(() => {
+		document.body.style.overflowY = burger ? 'hidden' : 'auto';
+	}, [burger]);
+
 	return (
 		<div className={styles.layout}>
 			<ThemeProvider>

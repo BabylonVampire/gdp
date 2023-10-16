@@ -1,4 +1,4 @@
-import { FC, useState } from 'react';
+import { FC, useEffect, useState } from 'react';
 import styles from './Header.module.scss';
 // import Logo from '@components/Logo/Logo';
 import { v4 } from 'uuid';
@@ -10,6 +10,7 @@ import { themeSlice } from '@store/reducers/ThemeSlice';
 import { ILink } from '../../../../types/ILink';
 import { WiMoonAltWaxingCrescent3, WiDaySunny } from 'react-icons/wi';
 import { HiOutlineMenu } from 'react-icons/hi';
+import { useAppSelector } from '../../../../store/hooks/redux';
 
 interface IHeaderProps {
 	links: ILink[];
@@ -23,6 +24,11 @@ const Header: FC<IHeaderProps> = ({ links, burgerCallBack, burgerState }) => {
 	);
 	const dispatch = useAppDispatch();
 	const { changeTheme } = themeSlice.actions;
+	const { theme } = useAppSelector((state) => state.themeReducer);
+
+	useEffect(() => {
+		setSwitchPosition(theme.id === 1);
+	}, [theme]);
 
 	const themeChanger = () => {
 		if (!switchPosition) {

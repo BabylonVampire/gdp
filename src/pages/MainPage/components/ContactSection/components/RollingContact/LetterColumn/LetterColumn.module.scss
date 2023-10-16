@@ -8,4 +8,5 @@
 }
 .letter {
 	user-select: none;
+	line-height: calc(var(--font-size-l) * 1.2);
 }

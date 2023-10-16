@@ -6,7 +6,7 @@ export const lightTheme: ITheme = {
 	style: {
 		colorMain: '#fff',
 		fontColorMain: '#000',
-		colorSecondary: '#111111',
+		colorSecondary: '#f7f7f7',
 		colorFrameMain: 'rgba(96, 96, 96, 0.2)',
 		colorFrameMainActive: 'rgba(0, 0, 0, 0.1)',
 		colorFrameShadow: 'rgba(0, 0, 0, 0.2)',
