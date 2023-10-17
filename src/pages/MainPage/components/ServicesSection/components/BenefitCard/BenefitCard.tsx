@@ -28,12 +28,16 @@ const BenefitCard: FC<IBenefitCardProps> = memo(
 		}, [iconProps]);
 
 		const changeFall = () => {
-			setFalling(!falling);
+			setFalling((prev) => !prev);
 		};
 
 		const headingAr = heading.split('');
 		return (
-			<div className={styles.benefitCard} onClick={changeFall}>
+			<div
+				className={styles.benefitCard}
+				onMouseEnter={changeFall}
+				onMouseLeave={changeFall}
+			>
 				<div className={styles.innerBox}>
 					<span className={styles.flare} />
 					<div

@@ -5,6 +5,7 @@
 }
 
 .innerBox {
+	pointer-events: none;
 	width: 50%;
 	text-align: center;
 	font-size: var(--font-size-s);

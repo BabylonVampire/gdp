@@ -71,7 +71,7 @@
 		animation: flareAnimation;
 		left: -150%;
 		background: var(--flare-gradient);
-		animation: flareAnimation 1.3s 1 linear; // Время и тип анимации можно менять
+		animation: flareAnimation 1.3s 1 linear forwards; // Время и тип анимации можно менять
 	}
 }
 
