@@ -8,6 +8,7 @@ import ContactSection from './components/ContactSection/ContactSection';
 import Heading from '@components/Heading/Heading';
 import { points } from '@db/progressBarPoints';
 import { components } from '@db/serviceTabs';
+import PortfolioSection from './components/PortfolioSection/PortfolioSection';
 
 interface IMainPageProps {}
 
@@ -23,6 +24,7 @@ const MainPage: FC<IMainPageProps> = ({}) => {
 			<VerticalProgressBar points={points} />
 			<Heading text={'Контакты'} />
 			<ContactSection />
+			<PortfolioSection />
 		</main>
 	);
 };

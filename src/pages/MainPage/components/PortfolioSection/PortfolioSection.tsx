@@ -1,16 +1,46 @@
 import { FC } from 'react';
 import styles from './PortfolioSection.module.scss';
-import { ITab } from '../../../../types/ITab';
 import Tabs from '../../../../components/Tabs/Tabs';
+import WebSiteTab from './components/WebSiteTab/WebSiteTab';
 
-interface IPortfolioSectionProps {
-	components: ITab[];
-}
+interface IPortfolioSectionProps {}
 
-const PortfolioSection: FC<IPortfolioSectionProps> = ({ components }) => {
+const PortfolioSection: FC<IPortfolioSectionProps> = ({}) => {
 	return (
 		<div className={styles.PortfolioSection}>
-			<Tabs tabs={components} />
+			<Tabs
+				tabs={[
+					{
+						component: (
+							<WebSiteTab
+								cards={[
+									{
+										title: 'Сыпучий груз',
+										description:
+											'Пример многостраничного интернет-магазина',
+										sitePic:
+											'/src/assets/portfolio/sites/sypGr.png',
+									},
+									{
+										title: 'Тема Бар',
+										description: 'Пример сайта-визитки',
+										sitePic:
+											'/src/assets/portfolio/sites/temaBar.png',
+									},
+									{
+										title: 'Shine Bright',
+										description:
+											'Пример многостраничного интернет-магазина',
+										sitePic:
+											'/src/assets/portfolio/sites/shineBright.png',
+									},
+								]}
+							/>
+						),
+						name: 'Наши сайты',
+					},
+				]}
+			/>
 		</div>
 	);
 };

@@ -15,4 +15,8 @@ export const links = [
 		heading: 'Контакты',
 		link: '#contacts',
 	},
+	{
+		heading: 'Наши работы',
+		link: '#portfolio',
+	},
 ];
