@@ -25,13 +25,15 @@ const RollingText: FC<IRollingTextProps> = ({}) => {
 		text: string;
 	}
 	const RollLine: FC<IRollLineProps> = ({ text }) => {
-		const [animEnd, setAnimEnd] = useState<boolean>(false);
+		const [animEnd, setAnimEnd] = useState<boolean | null>(null);
 
 		useEffect(() => {
+			setAnimEnd(false);
 			setTimeout(() => {
 				setAnimEnd(true);
 			}, 5000);
 		}, []);
+
 		return (
 			<div
 				className={styles.rollingText}
@@ -47,11 +49,13 @@ const RollingText: FC<IRollingTextProps> = ({}) => {
 							key={letter + `${index}`}
 							className={styles.letterBox}
 							style={{
-								animationDuration: `${animDur}s`,
-								transition: `1s`,
-								transform: animEnd
-									? 'translateY(-73.5%)'
-									: 'translateY(-57.5%)',
+								transition: animEnd ? '1s' : `${animDur}s`,
+								transform:
+									animEnd === null
+										? 'translateY(0%)'
+										: animEnd
+										? 'translateY(-73.5%)'
+										: 'translateY(-57.5%)',
 							}}
 						>
 							{[...Array(11)].map((l, i) => {

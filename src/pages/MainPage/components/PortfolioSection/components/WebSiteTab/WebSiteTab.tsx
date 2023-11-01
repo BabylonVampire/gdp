@@ -7,6 +7,7 @@ interface IWebSiteTabProps {
 		title: string;
 		description: string;
 		sitePic: string;
+		sitePicPhone: string;
 	}[];
 }
 

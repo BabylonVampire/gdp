@@ -34,6 +34,7 @@ const BurgerMenu: FC<IBurgerMenuProps> = ({ links, state, setState }) => {
 			dispatch(changeTheme(darkTheme));
 		}
 	};
+
 	return (
 		<div
 			className={styles.BurgerMenu}

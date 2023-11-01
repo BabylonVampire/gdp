@@ -50,14 +50,15 @@ $switchHeight: 2.5em;
 }
 .circle {
 	z-index: 2;
-	height: $switchHeight;
-	width: $switchHeight;
+	height: calc($switchHeight - 0.3em);
+	width: calc($switchHeight - 0.3em);
 	border-radius: 50%;
 	background-color: var(--font-color-code);
 	position: absolute;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	margin: 0.15em;
 	& > * {
 		position: relative;
 		font-size: var(--font-size-l);

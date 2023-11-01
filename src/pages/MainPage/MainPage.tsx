@@ -22,9 +22,9 @@ const MainPage: FC<IMainPageProps> = ({}) => {
 			<ServicesSection components={components} />
 			<Heading text={'Схема сотрудничества'} />
 			<VerticalProgressBar points={points} />
+			<PortfolioSection />
 			<Heading text={'Контакты'} />
 			<ContactSection />
-			<PortfolioSection />
 		</main>
 	);
 };

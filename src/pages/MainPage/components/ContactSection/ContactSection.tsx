@@ -6,6 +6,7 @@ import styles from './ContactSection.module.scss';
 import RollingContact from './components/RollingContact/RollingContact';
 import Button from '../../../../GlassUI/Button/Button';
 import { classNames } from '../../../../components/utils/classNames';
+import { FaTelegram, FaYoutube, FaInstagram } from 'react-icons/fa6';
 
 interface IContactSectionProps {}
 
@@ -75,7 +76,7 @@ const ContactSection: FC<IContactSectionProps> = ({}) => {
 										: 'pointer',
 								}}
 							>
-								<div className={styles.triangle} />
+								<FaYoutube />
 							</a>
 							<a
 								className={styles.instagram}
@@ -89,8 +90,7 @@ const ContactSection: FC<IContactSectionProps> = ({}) => {
 										: 'pointer',
 								}}
 							>
-								<div className={styles.bigCircle} />
-								<div className={styles.smallCircle} />
+								<FaInstagram />
 							</a>
 							<a
 								className={styles.telegram}

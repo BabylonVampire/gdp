@@ -6,12 +6,6 @@
 .letterBox {
 	display: inline-block;
 	position: relative;
-	// width: var(--font-size-xl);
-
-	animation-name: rollingLetters;
-	animation-timing-function: ease-in-out;
-	animation-iteration-count: 1;
-	transition: 0.2s;
 }
 .letter,
 .currentLetter {
@@ -61,14 +55,5 @@
 	}
 	to {
 		opacity: 0;
-	}
-}
-
-@-webkit-keyframes rollingLetters {
-	from {
-		transform: translateY(0);
-	}
-	to {
-		transform: translateY(-57.5%);
 	}
 }
