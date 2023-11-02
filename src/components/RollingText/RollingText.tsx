@@ -16,8 +16,9 @@ const RollingText: FC<IRollingTextProps> = ({}) => {
 	const [displayGlitch, setDisplayGlitch] = useState<boolean>(false);
 
 	useEffect(() => {
-		setTimeout(() => {
+		const changeToGlitch = setTimeout(() => {
 			setDisplayGlitch(true);
+			window.clearTimeout(changeToGlitch);
 		}, 6500);
 	}, []);
 
@@ -29,8 +30,9 @@ const RollingText: FC<IRollingTextProps> = ({}) => {
 
 		useEffect(() => {
 			setAnimEnd(false);
-			setTimeout(() => {
+			const rollUp = setTimeout(() => {
 				setAnimEnd(true);
+				window.clearTimeout(rollUp);
 			}, 5000);
 		}, []);
 
@@ -52,15 +54,16 @@ const RollingText: FC<IRollingTextProps> = ({}) => {
 								transition: animEnd ? '1s' : `${animDur}s`,
 								transform:
 									animEnd === null
-										? 'translateY(0%)'
+										? 'translateY(0)'
 										: animEnd
-										? 'translateY(-73.5%)'
-										: 'translateY(-57.5%)',
+										? 'translateY(calc(var(--index) * -29.1))'
+										: 'translateY(calc(var(--index) * -22.8))',
 							}}
 						>
 							{[...Array(11)].map((l, i) => {
 								return i != 8 ? (
 									<div
+										key={`letter${text}${i}`}
 										className={styles.letter}
 										style={{
 											width: animEnd
@@ -73,6 +76,7 @@ const RollingText: FC<IRollingTextProps> = ({}) => {
 									</div>
 								) : (
 									<pre
+										key={`letter${text}${i}`}
 										className={styles.currentLetter}
 										style={{
 											animationDelay: `${animDur}s`,

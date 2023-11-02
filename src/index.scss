@@ -105,7 +105,8 @@
 		--font-size-xs: calc(var(--index) * 0.3);
 		--font-size-s: calc(var(--index) * 0.6);
 		--font-size-m: calc(var(--index) * 1);
-		--font-size-l: calc(var(--index) * 1.5);
+		--font-size-l: calc(var(--index) * 2);
+		--font-size-xl: calc(var(--index) * 3);
 	}
 }
 
@@ -113,7 +114,9 @@
 	:root {
 		--font-size-xs: calc(var(--index) * 0.3);
 		--font-size-s: calc(var(--index) * 0.6);
-		--font-size-m: calc(var(--index) * 1);
-		--font-size-l: calc(var(--index) * 1.2);
+		--font-size-sm: calc(var(--index) * 1.2);
+		--font-size-m: calc(var(--index) * 1.2);
+		--font-size-l: calc(var(--index) * 2);
+		--font-size-xl: calc(var(--index) * 3);
 	}
 }

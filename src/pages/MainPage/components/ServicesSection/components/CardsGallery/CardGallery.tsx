@@ -64,24 +64,26 @@ const CardsGallery: FC<ICardGalleyProps> = memo(({ cardPull }) => {
 							: 'invert(1)',
 				}}
 			/>
-			<div className={styles.galleryLeft}>
-				{currentCardPull.cardPull.map((card, index) => {
-					return index % 2 === 0 ? (
-						rerenderCard((card = card))
-					) : (
-						<></>
-					);
-				})}
-			</div>
-			<div className={styles.galleryRight}>
-				{currentCardPull.cardPull.map((card, index) => {
-					return index % 2 === 1 ? (
-						rerenderCard((card = card))
-					) : (
-						<></>
-					);
-				})}
-			</div>
+			<>
+				<div className={styles.galleryLeft}>
+					{currentCardPull.cardPull.map((card, index) => {
+						return index % 2 === 0 ? (
+							rerenderCard((card = card))
+						) : (
+							<></>
+						);
+					})}
+				</div>
+				<div className={styles.galleryRight}>
+					{currentCardPull.cardPull.map((card, index) => {
+						return index % 2 === 1 ? (
+							rerenderCard((card = card))
+						) : (
+							<></>
+						);
+					})}
+				</div>
+			</>
 		</div>
 	);
 });

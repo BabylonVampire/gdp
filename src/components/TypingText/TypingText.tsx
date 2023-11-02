@@ -1,14 +1,22 @@
 import { FC, useEffect, useState } from 'react';
 import styles from './TypingText.module.scss';
+import { classNames } from '../utils/classNames';
 
 interface ITypingTextProps {
 	text: string;
 	speed: number;
 	start?: boolean;
 	style?: React.CSSProperties | undefined;
+	className?: string;
 }
 
-const TypingText: FC<ITypingTextProps> = ({ text, speed, start, style }) => {
+const TypingText: FC<ITypingTextProps> = ({
+	text,
+	speed,
+	start,
+	style,
+	className,
+}) => {
 	if (start === undefined) {
 		start = true;
 	}
@@ -31,7 +39,12 @@ const TypingText: FC<ITypingTextProps> = ({ text, speed, start, style }) => {
 	return (
 		<div className="TypingText">
 			<div className="innerContainer">
-				<p className={styles.textField} style={style}>
+				<p
+					className={classNames(styles.textField, {}, [
+						className ? className : '',
+					])}
+					style={style}
+				>
 					{typingText}
 					<span className={styles.caret}>|</span>
 				</p>

@@ -9,6 +9,7 @@ const AboutSection: FC<IAboutSectionProps> = ({}) => {
 		<div className={styles.aboutSection} id="about">
 			<div className={styles.innerBox}>
 				<TypingText
+					className={styles.typingText}
 					text="Война за независимость Сомалиленда (сомал. Dagaalkii Xoraynta Soomaaliland, букв. Сомалилендская освободительная война) — восстание, развязанное Сомалийским национальным движением (СНД)"
 					speed={50}
 				/>
