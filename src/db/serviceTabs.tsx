@@ -1,17 +1,19 @@
-import CardsGallery from '../pages/MainPage/components/ServicesSection/components/CardsGallery/CardGallery';
+import ServiceTab from '../pages/MainPage/components/ServicesSection/components/ServiceTab/ServiceTab';
 import { cardPulls } from './cardPulls';
+import { web } from './services';
+import { skullIcon, palette, camera } from './icons';
 
 export const components = [
 	{
-		component: <CardsGallery cardPull={cardPulls.web} />,
+		component: <ServiceTab tabContent={web} icon={skullIcon} />,
 		name: cardPulls.web.name,
 	},
 	{
-		component: <CardsGallery cardPull={cardPulls.design} />,
+		component: <ServiceTab tabContent={web} icon={palette} />,
 		name: cardPulls.design.name,
 	},
 	{
-		component: <CardsGallery cardPull={cardPulls.video} />,
+		component: <ServiceTab tabContent={web} icon={camera} />,
 		name: cardPulls.video.name,
 	},
 ];

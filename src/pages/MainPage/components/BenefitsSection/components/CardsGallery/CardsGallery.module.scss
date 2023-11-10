@@ -1,0 +1,29 @@
+.galleryRight,
+.galleryLeft {
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: calc(var(--index) * 5);
+}
+
+.galleryRight {
+	padding-top: calc(var(--index) * 10);
+}
+
+.galleriesBox {
+	margin: 2% 0;
+	padding: 0 5%;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	transition: 0.5s;
+}
+.backGround {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-position: center center;
+}

@@ -2,10 +2,15 @@
 	position: relative;
 	width: 100%;
 	min-height: 100vh;
-	background-color: var(--color-main);
-	// background-image: url(../../../src/assets/background/фое.gif);
+	// background-color: var(--color-main);
+	transition: background-color 0.3s, right 0.3s;
+}
+
+.layout {
+	width: 100%;
+	height: 100%;
+	background-image: url(../../../src/assets/background/фое.gif);
 	background-size: contain;
 	background-repeat: repeat;
 	overflow: hidden;
-	transition: background-color 0.3s, right 0.3s;
 }

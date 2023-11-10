@@ -33,7 +33,7 @@
 }
 
 .barLine {
-	width: 0.7em;
+	width: calc(var(--index) * 0.5);
 	height: 100%;
 	background-color: var(--color-frame-main);
 	border-radius: 7px;
@@ -56,11 +56,13 @@
 
 .heading {
 	font-size: calc(var(--index) * 1.4);
+	transition: 0.3s;
 }
 
 .subText {
 	color: var(--font-color-secondary);
 	font-size: calc(var(--font-size-m));
+	transition: 0.3s;
 }
 
 .icon {
@@ -78,6 +80,8 @@
 	overflow: hidden;
 	justify-content: center;
 	align-items: center;
+	z-index: 1;
+	transition: 0.5s;
 }
 
 .backDrop {

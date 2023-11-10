@@ -16,26 +16,22 @@ const Layout: FC<PropsWithChildren> = memo(({ children }) => {
 
 	return (
 		<div className={styles.layout}>
-			<ThemeProvider>
-				<BurgerMenu links={links} state={burger} setState={setBurger} />
-				<div
-					className={styles.mainLayoutBox}
-					style={{
-						right: burger ? '50vw' : '0',
-					}}
-					onClick={
-						burger ? () => setBurger((prev) => !prev) : () => {}
-					}
-				>
-					<Header
-						links={links}
-						burgerCallBack={setBurger}
-						burgerState={burger}
-					/>
-					{children}
-					<Footer links={links} contacts={contacts} />
-				</div>
-			</ThemeProvider>
+			<BurgerMenu links={links} state={burger} setState={setBurger} />
+			<div
+				className={styles.mainLayoutBox}
+				style={{
+					right: burger ? '50vw' : '0',
+				}}
+				onClick={burger ? () => setBurger((prev) => !prev) : () => {}}
+			>
+				<Header
+					links={links}
+					burgerCallBack={setBurger}
+					burgerState={burger}
+				/>
+				<ThemeProvider>{children}</ThemeProvider>
+				<Footer links={links} contacts={contacts} />
+			</div>
 		</div>
 	);
 });

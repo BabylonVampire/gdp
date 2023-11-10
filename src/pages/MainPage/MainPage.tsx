@@ -9,6 +9,7 @@ import Heading from '@components/Heading/Heading';
 import { points } from '@db/progressBarPoints';
 import { components } from '@db/serviceTabs';
 import PortfolioSection from './components/PortfolioSection/PortfolioSection';
+import BenefitsSection from './components/BenefitsSection/BenefitsSection';
 
 interface IMainPageProps {}
 
@@ -18,6 +19,8 @@ const MainPage: FC<IMainPageProps> = ({}) => {
 			<HeroSection />
 			<Heading text={'О Нас'} />
 			<AboutSection />
+			<Heading text={'Наши преимущества'} />
+			<BenefitsSection />
 			<Heading text={'Услуги'} />
 			<ServicesSection components={components} />
 			<Heading text={'Схема сотрудничества'} />

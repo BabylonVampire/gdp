@@ -26,44 +26,40 @@ const VerticalProgressBar: FC<IVerticalProgressBarProps> = ({ points }) => {
 								}}
 							>
 								<div
-									className={styles.backDrop}
+									className={styles.icon}
+									onClick={() => {
+										setClickState(index);
+									}}
 									style={{
-										transition:
-											'transition: width 0.5s, background-color 0.3s',
-										width:
+										opacity: clickState === index ? 0 : 1,
+										rotate:
 											clickState === index
-												? '50%'
-												: '100%',
-										left: 0,
+												? '-180deg'
+												: '0deg',
+										cursor:
+											clickState === index
+												? 'auto'
+												: 'pointer',
+										right:
+											clickState === index ? '3em' : '0',
 									}}
 								>
-									<div
-										className={styles.icon}
-										onClick={() => {
-											setClickState(index);
-										}}
-										style={{
-											right: '0',
-											transition: '0.5s',
-											opacity:
-												clickState === index ? 0 : 1,
-											rotate:
-												clickState === index
-													? '-180deg'
-													: '0deg',
-											cursor:
-												clickState === index
-													? 'auto'
-													: 'pointer',
-										}}
-									>
-										{point.point.icon}
-									</div>
+									{point.point.icon}
 								</div>
-								<div className={styles.heading}>
+								<div
+									className={styles.heading}
+									style={{
+										opacity: clickState === index ? 1 : 0,
+									}}
+								>
 									{point.point.heading}
 								</div>
-								<div className={styles.subText}>
+								<div
+									className={styles.subText}
+									style={{
+										opacity: clickState === index ? 1 : 0,
+									}}
+								>
 									{point.point.subText}
 								</div>
 							</div>
@@ -120,44 +116,40 @@ const VerticalProgressBar: FC<IVerticalProgressBarProps> = ({ points }) => {
 								}}
 							>
 								<div
-									className={styles.backDrop}
+									className={styles.icon}
+									onClick={() => {
+										setClickState(index);
+									}}
 									style={{
-										transition:
-											'transition: width 0.5s, background-color 0.3s',
-										width:
+										opacity: clickState === index ? 0 : 1,
+										rotate:
 											clickState === index
-												? '50%'
-												: '100%',
-										right: 0,
+												? '180deg'
+												: '0deg',
+										cursor:
+											clickState === index
+												? 'auto'
+												: 'pointer',
+										left:
+											clickState === index ? '3em' : '0',
 									}}
 								>
-									<div
-										className={styles.icon}
-										onClick={() => {
-											setClickState(index);
-										}}
-										style={{
-											left: '0',
-											transition: '0.5s',
-											opacity:
-												clickState === index ? 0 : 1,
-											rotate:
-												clickState === index
-													? '180deg'
-													: '0deg',
-											cursor:
-												clickState === index
-													? 'auto'
-													: 'pointer',
-										}}
-									>
-										{point.point.icon}
-									</div>
+									{point.point.icon}
 								</div>
-								<div className={styles.heading}>
+								<div
+									className={styles.heading}
+									style={{
+										opacity: clickState === index ? 1 : 0,
+									}}
+								>
 									{point.point.heading}
 								</div>
-								<div className={styles.subText}>
+								<div
+									className={styles.subText}
+									style={{
+										opacity: clickState === index ? 1 : 0,
+									}}
+								>
 									{point.point.subText}
 								</div>
 							</div>

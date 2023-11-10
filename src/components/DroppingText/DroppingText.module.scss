@@ -1,0 +1,26 @@
+.droppingText {
+	margin: calc(var(--index) * 0.5) 0;
+	font-size: var(--font-size-sm);
+	color: var(--font-color-main);
+	font-family: var(--font-family-main);
+	padding: calc(var(--index) * 1);
+	background-color: var(--color-frame-main);
+	box-shadow: inset 0 0 7px 0 var(--color-frame-shadow);
+	border-radius: 7px;
+	backdrop-filter: blur(5px);
+	-webkit-backdrop-filter: blur(5px);
+}
+
+.text {
+	overflow: hidden;
+	position: relative;
+	transition: 0.3s;
+	width: 100%;
+}
+
+.thinDivider {
+	margin: calc(var(--index) * 0.3) 0;
+	width: 100%;
+	height: 2px;
+	// background-color: var(--font-color-secondary);
+}

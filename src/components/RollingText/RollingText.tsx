@@ -3,10 +3,11 @@ import styles from './RollingText.module.scss';
 import GlitchedHeading from '../GlitchedHeading/GlitchedHeading';
 import { regExpToArray } from '../utils/regExpToArray';
 
-interface IRollingTextProps {}
+interface IRollingTextProps {
+	text: string;
+}
 
-const RollingText: FC<IRollingTextProps> = ({}) => {
-	const text = 'HEADING';
+const RollingText: FC<IRollingTextProps> = ({ text }) => {
 	const alphabet = useMemo(() => regExpToArray(/[A-z]/), []);
 
 	const randomChar = useCallback(() => {
