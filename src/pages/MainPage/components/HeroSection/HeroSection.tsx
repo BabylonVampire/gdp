@@ -16,13 +16,13 @@ const HeroSection: FC<IHeroSectionProps> = ({}) => {
 		<div className={styles.heroSection} id="home">
 			<div className={styles.innerBox}>
 				<div className={styles.textBox}>
-					<RollingText text="GAFUROV" />
+					<RollingText text="HEADING" />
 					<GlitchedHeading
 						style={{
 							opacity: appear ? 1 : 0,
 							transition: '2s',
 						}}
-						heading="digital production"
+						heading="test heading"
 						fontSize="calc(var(--font-size-l) * 0.68)"
 					/>
 				</div>
