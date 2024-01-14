@@ -4,10 +4,11 @@ import GlitchedHeading from '../GlitchedHeading/GlitchedHeading';
 import { regExpToArray } from '../utils/regExpToArray';
 
 interface IRollingTextProps {
+	style?: React.CSSProperties;
 	text: string;
 }
 
-const RollingText: FC<IRollingTextProps> = ({ text }) => {
+const RollingText: FC<IRollingTextProps> = ({ text, style }) => {
 	const alphabet = useMemo(() => regExpToArray(/[A-z]/), []);
 
 	const randomChar = useCallback(() => {
@@ -41,12 +42,12 @@ const RollingText: FC<IRollingTextProps> = ({ text }) => {
 			<div
 				className={styles.rollingText}
 				style={{
-					height: `calc(var(--font-size-xl) * ${animEnd ? 1 : 5})`,
+					height: `calc(var(--font-size-xl) * ${animEnd ? 1.3 : 5})`,
 					transition: '1s',
 				}}
 			>
 				{text.split('').map((letter, index) => {
-					let animDur = Math.random() * 3 + 1;
+					const animDur = Math.random() * 3 + 1;
 					return (
 						<div
 							key={letter + `${index}`}
@@ -57,8 +58,8 @@ const RollingText: FC<IRollingTextProps> = ({ text }) => {
 									animEnd === null
 										? 'translateY(0)'
 										: animEnd
-										? 'translateY(calc(var(--index) * -29.1))'
-										: 'translateY(calc(var(--index) * -22.8))',
+										? 'translateY(calc(var(--index) * -28.9))'
+										: 'translateY(calc(var(--index) * -23.5))',
 							}}
 						>
 							{[...Array(11)].map((l, i) => {
@@ -81,6 +82,7 @@ const RollingText: FC<IRollingTextProps> = ({ text }) => {
 										className={styles.currentLetter}
 										style={{
 											animationDelay: `${animDur}s`,
+											...style,
 										}}
 									>
 										{letter}
@@ -100,6 +102,10 @@ const RollingText: FC<IRollingTextProps> = ({ text }) => {
 				<GlitchedHeading
 					heading={text}
 					fontSize="var(--font-size-xl)"
+					style={{
+						textShadow: '0 0 8px white',
+						...style,
+					}}
 				/>
 			) : (
 				<RollLine text={text} />

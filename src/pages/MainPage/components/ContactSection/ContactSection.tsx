@@ -82,7 +82,7 @@ const ContactSection: FC<IContactSectionProps> = ({}) => {
 								className={styles.instagram}
 								style={{
 									left: showSocialNetworks
-										? 'calc(var(--index) * 7)'
+										? 'calc(var(--index) * 5)'
 										: '0',
 									opacity: showSocialNetworks ? 1 : 0,
 									cursor: !showSocialNetworks
@@ -96,7 +96,7 @@ const ContactSection: FC<IContactSectionProps> = ({}) => {
 								className={styles.telegram}
 								style={{
 									left: showSocialNetworks
-										? 'calc(var(--index) * 12)'
+										? 'calc(var(--index) * 10)'
 										: '0',
 									opacity: showSocialNetworks ? 1 : 0,
 									cursor: !showSocialNetworks
@@ -104,7 +104,7 @@ const ContactSection: FC<IContactSectionProps> = ({}) => {
 										: 'pointer',
 								}}
 							>
-								<div className={styles.telegramIconGap} />
+								<FaTelegram />
 							</a>
 						</div>
 					</div>

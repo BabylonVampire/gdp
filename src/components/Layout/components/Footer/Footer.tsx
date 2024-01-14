@@ -2,7 +2,6 @@ import { FC, memo } from 'react';
 import styles from './Footer.module.scss';
 import { FaTelegram, FaYoutube, FaInstagram } from 'react-icons/fa6';
 import { ILink } from '../../../../types/ILink';
-// import Logo from '../../../Logo/Logo';
 import { v4 } from 'uuid';
 
 interface IFooterProps {
