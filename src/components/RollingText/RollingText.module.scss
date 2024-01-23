@@ -40,12 +40,12 @@
 	}
 	50% {
 		color: var(--font-color-main);
-		text-shadow: 0 0 7px white;
+		text-shadow: 0 0 8px white;
 	}
 	to {
-		text-shadow: 0 0 0px white;
 		color: var(--font-color-main);
 		font-weight: bold;
+		text-shadow: 0 0 8px white;
 	}
 }
 

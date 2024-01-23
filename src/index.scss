@@ -25,6 +25,8 @@ html {
 	--font-family-script: geoFont;
 	--font-family-main: golos;
 	--font-family-heading: visitor;
+	--font-family-logo: RezaZulmiSans;
+	--font-family-sunLogo: montserrat;
 	/* font-families */
 
 	/* font-sizes */
@@ -102,8 +104,13 @@ html {
 }
 
 @font-face {
-	font-family: rezaZulmiSans;
+	font-family: RezaZulmiSans;
 	src: url(./assets/fonts/RezaZulmiSans.ttf);
+}
+
+@font-face {
+	font-family: montserrat;
+	src: url(./assets/fonts/Montserrat-Regular.otf);
 }
 /* FONT FAMILIES */
 
