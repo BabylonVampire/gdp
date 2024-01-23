@@ -4,7 +4,7 @@ import styles from './AboutSection.module.scss';
 
 interface IAboutSectionProps {}
 
-const AboutSection: FC<IAboutSectionProps> = ({}) => {
+const AboutSection: FC<IAboutSectionProps> = () => {
 	return (
 		<div className={styles.aboutSection} id="about">
 			<div className={styles.innerBox}>

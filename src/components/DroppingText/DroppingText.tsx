@@ -22,14 +22,18 @@ const DroppingText: FC<IDroppingTextProps> = ({
 	};
 	return (
 		<div className={styles.droppingText} onClick={changeDrop}>
-			<IoMdArrowDropright
-				style={{
-					rotate: drop ? '90deg' : '0deg',
-					color: 'var(--font-color-code)',
-					transition: '0.2s',
-				}}
-			/>
-			{preview}
+			<div className={styles.previewBox}>
+				<div className={styles.iconWrapper}>
+					<IoMdArrowDropright
+						style={{
+							rotate: drop ? '90deg' : '0deg',
+							color: 'var(--font-color-code)',
+							transition: '0.2s',
+						}}
+					/>
+				</div>
+				<div className={styles.preview}>{preview}</div>
+			</div>
 			<div
 				className={styles.text}
 				style={{ maxHeight: drop ? '4lh' : '0' }}

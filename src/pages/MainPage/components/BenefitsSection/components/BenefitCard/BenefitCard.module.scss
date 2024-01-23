@@ -22,6 +22,7 @@
 	}
 }
 .textBox {
+	height: 100%;
 	opacity: 0;
 	position: absolute;
 	top: 0;
@@ -30,6 +31,8 @@
 	display: flex;
 	justify-content: center;
 	transition: 0.5s;
+	display: flex;
+	align-items: center;
 }
 .textBoxInnerBox {
 	width: 90%;

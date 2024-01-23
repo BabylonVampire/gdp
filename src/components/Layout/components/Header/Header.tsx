@@ -1,16 +1,16 @@
 import { FC, useEffect, useState } from 'react';
 import styles from './Header.module.scss';
 // import Logo from '@components/Logo/Logo';
-import { v4 } from 'uuid';
 import Switch from '@components/Switch/Switch';
-import { lightTheme } from '@db/themes/lightTheme';
 import { darkTheme } from '@db/themes/darkTheme';
+import { lightTheme } from '@db/themes/lightTheme';
 import { useAppDispatch } from '@store/hooks/redux';
 import { themeSlice } from '@store/reducers/ThemeSlice';
-import { ILink } from '../../../../types/ILink';
-import { WiMoonAltWaxingCrescent3, WiDaySunny } from 'react-icons/wi';
 import { HiOutlineMenu } from 'react-icons/hi';
+import { WiDaySunny, WiMoonAltWaxingCrescent3 } from 'react-icons/wi';
+import { v4 } from 'uuid';
 import { useAppSelector } from '../../../../store/hooks/redux';
+import { ILink } from '../../../../types/ILink';
 
 interface IHeaderProps {
 	links: ILink[];

@@ -20,13 +20,14 @@ const TypingText: FC<ITypingTextProps> = ({
 	if (start === undefined) {
 		start = true;
 	}
+
 	text = '   ' + text;
 	const [index, setIndex] = useState<number>(0);
 	const [typingText, setTypingText] = useState<string>('');
 
 	useEffect(() => {
 		if (start) {
-			let timeout = setTimeout(() => {
+			const timeout = setTimeout(() => {
 				setTypingText((prev) => [prev, text.charAt(index)].join(''));
 				setIndex((prev) => prev + 1);
 			}, speed);
@@ -35,6 +36,12 @@ const TypingText: FC<ITypingTextProps> = ({
 			}
 		}
 	}, [index, start]);
+
+	useEffect(() => {
+		text = '   ' + text;
+		setIndex(0);
+		setTypingText('');
+	}, [text]);
 
 	return (
 		<div className="TypingText">

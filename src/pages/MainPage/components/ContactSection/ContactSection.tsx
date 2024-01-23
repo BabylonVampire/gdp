@@ -104,7 +104,7 @@ const ContactSection: FC<IContactSectionProps> = ({}) => {
 										: 'pointer',
 								}}
 							>
-								<div className={styles.telegramIconGap} />
+								<FaTelegram />
 							</a>
 						</div>
 					</div>

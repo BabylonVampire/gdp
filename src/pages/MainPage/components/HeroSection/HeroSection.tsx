@@ -5,7 +5,7 @@ import RollingText from '../../../../components/RollingText/RollingText';
 
 interface IHeroSectionProps {}
 
-const HeroSection: FC<IHeroSectionProps> = ({}) => {
+const HeroSection: FC<IHeroSectionProps> = () => {
 	const [appear, setAppear] = useState<boolean>(false);
 	useEffect(() => {
 		setTimeout(() => {
@@ -16,13 +16,14 @@ const HeroSection: FC<IHeroSectionProps> = ({}) => {
 		<div className={styles.heroSection} id="home">
 			<div className={styles.innerBox}>
 				<div className={styles.textBox}>
-					<RollingText text="HEADING" />
+					<RollingText text="GAFUROV" />
 					<GlitchedHeading
 						style={{
 							opacity: appear ? 1 : 0,
 							transition: '2s',
+							color: 'var(--font-color-secondary)',
 						}}
-						heading="test heading"
+						heading="digital production"
 						fontSize="calc(var(--font-size-l) * 0.68)"
 					/>
 				</div>

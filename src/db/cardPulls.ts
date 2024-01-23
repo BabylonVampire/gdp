@@ -6,17 +6,17 @@ import {
 
 export const cardPulls = {
 	web: {
-		name: '1',
+		name: 'Разработка',
 		cardPull: servicesCardsWeb,
 		backGround: 'url(/src/assets/background/backService_2.gif)',
 	},
 	design: {
-		name: '2',
+		name: 'Дизайн',
 		cardPull: servicesCardsDesign,
 		backGround: 'url(/src/assets/background/backService_2.gif)',
 	},
 	video: {
-		name: '3',
+		name: 'Видеопродакшн',
 		cardPull: servicesCardsVideo,
 		backGround: 'url(/src/assets/background/backService_2.gif)',
 	},
