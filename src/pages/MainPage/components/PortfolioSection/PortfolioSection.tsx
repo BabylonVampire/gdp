@@ -2,6 +2,7 @@ import { FC } from 'react';
 import styles from './PortfolioSection.module.scss';
 import Tabs from '../../../../components/Tabs/Tabs';
 import WebSiteTab from './components/WebSiteTab/WebSiteTab';
+import VideoTab from './components/VideoTab/VideoTab';
 
 interface IPortfolioSectionProps {}
 
@@ -46,7 +47,17 @@ const PortfolioSection: FC<IPortfolioSectionProps> = ({}) => {
 						name: 'Наши сайты',
 					},
 					{
-						component: <></>,
+						component: (
+							<VideoTab
+								links={[
+									'https://www.youtube.com/embed/byZ55ljdeZo?si=H7PWxhfor7zfhabI',
+									'https://www.youtube.com/embed/WZIA5R5OpUM?si=eeoncKYud0-i8RUj',
+									'https://www.youtube.com/embed/WqB8Am4DH1E?si=uL33G6xwUTEIF96U',
+									'https://www.youtube.com/embed/egJgCKWlbzA?si=cFN92Hn86DqRGzcv',
+									'https://www.youtube.com/embed/Qph691VXPqc?si=EJLXPfn4eEHe6CW1',
+								]}
+							/>
+						),
 						name: 'Съемка видео',
 					},
 					{

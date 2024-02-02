@@ -60,6 +60,8 @@
 .instagram,
 .telegram,
 .youtube {
+	transition: 0.3s;
+	display: flex;
 	position: absolute;
 	width: calc(var(--index) * 4);
 	height: calc(var(--index) * 4);
@@ -84,9 +86,20 @@
 	transition: opacity 0.6s ease-in-out, scale 0.2s, filter 0.2s;
 }
 
+.telegram:hover {
+	color: #5ab3ce;
+}
+
+.instagram:hover {
+	color: #cc2366;
+}
+
+.youtube:hover {
+	color: #bb4141;
+}
+
 .youtube:hover,
 .instagram:hover,
 .telegram:hover {
 	scale: 1.05;
-	filter: brightness(1.5);
 }

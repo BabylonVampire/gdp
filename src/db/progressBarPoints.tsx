@@ -5,34 +5,61 @@ export const points: IPoint[] = [
 	{
 		point: {
 			icon: <BiAccessibility />,
-			heading: 'Пункт 1',
-			subText: 'Описание',
+			heading: 'БРИФИНГ',
+			subText: '',
 		},
 		description: {
-			heading: 'Заголовок',
-			description: 'Вот такое вот описание, да...',
+			heading: '',
+			description:
+				'Ставим цели, анализируем ЦА и определяем концепцию, позиционирование бренда.',
 		},
 	},
 	{
 		point: {
 			icon: <BiAccessibility />,
-			heading: 'Пункт 1',
-			subText: 'Описание',
+			heading: 'БРЕНДИНГ',
+			subText: '',
 		},
 		description: {
-			heading: 'Заголовок',
-			description: 'Вот такое вот описание, да...',
+			heading: '',
+			description:
+				'Воплощаем концепцию в жизнь, создавая имидж компании инструментами брендинга',
 		},
 	},
 	{
 		point: {
 			icon: <BiAccessibility />,
-			heading: 'Пункт 1',
-			subText: 'Описание',
+			heading: 'РАЗРАБОТКА',
+			subText: '',
 		},
 		description: {
-			heading: 'Заголовок',
-			description: 'Вот такое вот описание, да...',
+			heading: '',
+			description:
+				'Создаем сайты и приложения, соблюдая фирменный стиль и задачи заказчика',
+		},
+	},
+	{
+		point: {
+			icon: <BiAccessibility />,
+			heading: 'ВИДЕОПРОДАКШН',
+			subText: '',
+		},
+		description: {
+			heading: '',
+			description:
+				'Продюсируем рекламные ролики, интервью и контент для социальных сетей',
+		},
+	},
+	{
+		point: {
+			icon: <BiAccessibility />,
+			heading: 'ПРОДВИЖЕНИЕ',
+			subText: '',
+		},
+		description: {
+			heading: '',
+			description:
+				'Обеспечиваем бизнес клиентами используя современные инструменты маркетинга',
 		},
 	},
 ];

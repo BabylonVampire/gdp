@@ -27,7 +27,7 @@ const ServiceTab: FC<IServiceTabProps> = ({ tabContent, icon }) => {
 						switch (paragraph.type) {
 							case 'list':
 								return (
-									<ul
+									<div
 										className={styles.paragraphList}
 										key={v4()}
 									>
@@ -42,16 +42,17 @@ const ServiceTab: FC<IServiceTabProps> = ({ tabContent, icon }) => {
 													>
 														<DroppingText
 															preview={
-																listElement
+																listElement.title
 															}
-															droppingText={'asd'}
+															droppingText={
+																listElement.description
+															}
 														/>
-														{/* {listElement} */}
 													</div>
 												);
 											}
 										)}
-									</ul>
+									</div>
 								);
 
 							case 'heading':
@@ -60,7 +61,7 @@ const ServiceTab: FC<IServiceTabProps> = ({ tabContent, icon }) => {
 										className={styles.paragraphHeading}
 										key={v4()}
 									>
-										{paragraph.content[0]}
+										{paragraph.content[0].title}
 									</div>
 								);
 
@@ -70,7 +71,7 @@ const ServiceTab: FC<IServiceTabProps> = ({ tabContent, icon }) => {
 										className={styles.paragraphText}
 										key={v4()}
 									>
-										{paragraph.content[0]}
+										{paragraph.content[0].title}
 									</div>
 								);
 

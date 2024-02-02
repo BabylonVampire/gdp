@@ -66,12 +66,16 @@
 }
 
 .paragraphList {
+	display: flex;
 	list-style: inside;
 	font-size: var(--font-size-sm);
 	color: var(--font-color-main);
 	font-family: var(--font-family-main);
+	flex-wrap: wrap;
+	flex-direction: row;
 	& > * {
-		margin: calc(var(--index) * 0.3) 0;
+		padding: 10px;
+		width: 50%;
 	}
 }
 

@@ -1,9 +1,7 @@
 import ServiceTab from '../pages/MainPage/components/ServicesSection/components/ServiceTab/ServiceTab';
 import { cardPulls } from './cardPulls';
-import { web } from './services';
+import { web, video, design } from './services';
 import { skullIcon, palette, camera } from './icons';
-import TypingIntoBrowser from '../components/TypingIntoBrowser/TypingIntoBrowser';
-
 export const components = [
 	{
 		component: (
@@ -24,7 +22,7 @@ export const components = [
 			// 	speed={50}
 			// 	loadingTime={1}
 			// >
-			<ServiceTab tabContent={web} icon={palette} />
+			<ServiceTab tabContent={video} icon={palette} />
 			// </TypingIntoBrowser>
 		),
 		name: cardPulls.design.name,
@@ -36,7 +34,7 @@ export const components = [
 			// 	speed={50}
 			// 	loadingTime={1}
 			// >
-			<ServiceTab tabContent={web} icon={camera} />
+			<ServiceTab tabContent={design} icon={camera} />
 			// </TypingIntoBrowser>
 		),
 		name: cardPulls.video.name,

@@ -1,0 +1,29 @@
+.videoCard {
+	margin-top: 20px;
+	border: solid;
+	border-width: 10px;
+	border-color: var(--color-frame-main-active);
+	border-radius: 7px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.iframeVideo {
+	width: 560px;
+	height: 315px;
+}
+
+@media (max-width: 700px) {
+	.iframeVideo {
+		width: 448px;
+		height: 252px;
+	}
+}
+
+@media (max-width: 500px) {
+	.iframeVideo {
+		width: 336px;
+		height: 189px;
+	}
+}

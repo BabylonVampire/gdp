@@ -1,6 +1,6 @@
 export interface ITabContent {
 	tabContent: {
 		type: string;
-		content: string[];
+		content: { title: string; description: string }[];
 	}[];
 }
