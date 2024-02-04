@@ -32,7 +32,7 @@ const BenefitsSection: FC<IBenefitsSectionProps> = ({}) => {
 							key={v4()}
 							heading={card.heading}
 							text={card.text}
-							iconProps={card.iconProps}
+							Icon={card.Icon}
 						/>
 					))}
 				</div>

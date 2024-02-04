@@ -1,7 +1,22 @@
 $switchHeight: 2.5em;
 
+.switchWrapper {
+	margin: 0 10px;
+	display: flex;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+}
+
+.iconWrapper {
+	margin-top: 7px;
+	font-size: calc($switchHeight * 0.75);
+	color: var(--font-color-code);
+}
+
 .switch {
-	margin: 0 1em;
+	margin: 0 0.5em;
 	width: calc($switchHeight * 2);
 	display: flex;
 	justify-content: center;

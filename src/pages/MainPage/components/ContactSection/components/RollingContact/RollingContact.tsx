@@ -1,8 +1,7 @@
-import { FC, useEffect, useMemo, useState } from 'react';
-import styles from './RollingContact.module.scss';
-import LetterColumn from './LetterColumn/LetterColumn';
 import { regExpToArray } from '@components/utils/regExpToArray';
-import { v4 } from 'uuid';
+import { FC, useEffect, useMemo, useState } from 'react';
+import LetterColumn from './LetterColumn/LetterColumn';
+import styles from './RollingContact.module.scss';
 
 interface IRollingContactProps {
 	text: string;

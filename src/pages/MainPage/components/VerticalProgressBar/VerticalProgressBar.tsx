@@ -1,8 +1,7 @@
-import { FC, useEffect, useState } from 'react';
-import styles from './VerticalProgressBar.module.scss';
-import { IPoint } from '../../../../types/IPoint';
+import { FC, useState } from 'react';
 import TypingText from '../../../../components/TypingText/TypingText';
-import { v4 } from 'uuid';
+import { IPoint } from '../../../../types/IPoint';
+import styles from './VerticalProgressBar.module.scss';
 
 interface IVerticalProgressBarProps {
 	points: IPoint[];
@@ -16,7 +15,7 @@ const VerticalProgressBar: FC<IVerticalProgressBarProps> = ({ points }) => {
 			<div className={styles.innerBox}>
 				<div className={styles.leftColumn}>
 					{points.map((point, index) => {
-						let pos = index % 2 === 0;
+						const pos = index % 2 === 0;
 						return pos ? (
 							<div
 								key={point.point.heading + `${index}`}
@@ -106,7 +105,7 @@ const VerticalProgressBar: FC<IVerticalProgressBarProps> = ({ points }) => {
 				</div>
 				<div className={styles.rightColumn}>
 					{points.map((point, index) => {
-						let pos = index % 2 === 1;
+						const pos = index % 2 === 1;
 						return pos ? (
 							<div
 								key={point.point.heading + `${index}`}

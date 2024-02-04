@@ -25,26 +25,34 @@ const PortfolioSection: FC<IPortfolioSectionProps> = ({}) => {
 											'/src/assets/portfolio/sites/sypGrPhone.png',
 									},
 									{
-										title: 'Тема Бар',
+										title: 'Развитие',
 										description: 'Пример сайта-визитки',
 										sitePic:
-											'/src/assets/portfolio/sites/temaBar.png',
+											'/src/assets/portfolio/sites/razvitie.png',
 										sitePicPhone:
-											'/src/assets/portfolio/sites/sypGrPhone.png',
+											'/src/assets/portfolio/sites/razvitiePhone.png',
 									},
-									{
-										title: 'Shine Bright',
-										description:
-											'Пример многостраничного интернет-магазина',
-										sitePic:
-											'/src/assets/portfolio/sites/shineBright.png',
-										sitePicPhone:
-											'/src/assets/portfolio/sites/sypGrPhone.png',
-									},
+									// {
+									// 	title: 'Тема Бар',
+									// 	description: 'Пример сайта-визитки',
+									// 	sitePic:
+									// 		'/src/assets/portfolio/sites/temaBar.png',
+									// 	sitePicPhone:
+									// 		'/src/assets/portfolio/sites/sypGrPhone.png',
+									// },
+									// {
+									// 	title: 'Shine Bright',
+									// 	description:
+									// 		'Пример многостраничного интернет-магазина',
+									// 	sitePic:
+									// 		'/src/assets/portfolio/sites/shineBright.png',
+									// 	sitePicPhone:
+									// 		'/src/assets/portfolio/sites/sypGrPhone.png',
+									// },
 								]}
 							/>
 						),
-						name: 'Наши сайты',
+						name: 'Сайты',
 					},
 					{
 						component: (
@@ -58,7 +66,7 @@ const PortfolioSection: FC<IPortfolioSectionProps> = ({}) => {
 								]}
 							/>
 						),
-						name: 'Съемка видео',
+						name: 'Видео',
 					},
 					{
 						component: <></>,

@@ -62,7 +62,7 @@ const RollingText: FC<IRollingTextProps> = ({ text, style }) => {
 										: 'translateY(calc(var(--index) * -23.5))',
 							}}
 						>
-							{[...Array(11)].map((l, i) => {
+							{[...Array(11)].map((_l, i) => {
 								return i != 8 ? (
 									<div
 										key={`letter${text}${i}`}

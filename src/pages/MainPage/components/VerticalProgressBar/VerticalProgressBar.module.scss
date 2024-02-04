@@ -102,3 +102,13 @@
 	color: var(--font-color-secondary);
 	font-size: calc(var(--font-size-m));
 }
+
+@media (max-width: 500px) {
+	.leftColumn,
+	.rightColumn {
+		padding: var(--index) calc(var(--index) * 0.5);
+	}
+	.innerBox {
+		width: 95%;
+	}
+}

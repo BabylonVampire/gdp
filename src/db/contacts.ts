@@ -1,4 +1,4 @@
 export const contacts = {
-	phones: ['+7 926 (082) 09-75', '+7 926 (082) 09-75'],
-	emails: ['nikitatabalov@gmail.com'],
+	phones: ['+7 (993) 891 77-47'],
+	emails: ['info@gafurovproduction.ru'],
 };

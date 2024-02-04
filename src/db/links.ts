@@ -12,11 +12,11 @@ export const links = [
 		link: '#Services',
 	},
 	{
-		heading: 'Контакты',
-		link: '#contacts',
-	},
-	{
 		heading: 'Наши работы',
 		link: '#portfolio',
+	},
+	{
+		heading: 'Контакты',
+		link: '#contacts',
 	},
 ];

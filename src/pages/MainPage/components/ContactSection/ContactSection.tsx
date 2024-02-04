@@ -1,12 +1,13 @@
 import { FC, useState } from 'react';
-import { FaPhone, FaPhoneVolume } from 'react-icons/fa6';
 import { AiOutlineLink } from 'react-icons/ai';
+import { FaWhatsapp } from 'react-icons/fa';
+import { FaInstagram, FaPhone, FaPhoneVolume } from 'react-icons/fa6';
 import { HiMail, HiMailOpen } from 'react-icons/hi';
-import styles from './ContactSection.module.scss';
-import RollingContact from './components/RollingContact/RollingContact';
+import { SlSocialVkontakte } from 'react-icons/sl';
 import Button from '../../../../GlassUI/Button/Button';
 import { classNames } from '../../../../components/utils/classNames';
-import { FaTelegram, FaYoutube, FaInstagram } from 'react-icons/fa6';
+import styles from './ContactSection.module.scss';
+import RollingContact from './components/RollingContact/RollingContact';
 
 interface IContactSectionProps {}
 
@@ -33,7 +34,7 @@ const ContactSection: FC<IContactSectionProps> = ({}) => {
 							{showPhone ? <FaPhoneVolume /> : <FaPhone />}
 						</Button>
 						<RollingContact
-							text="+7 (926) 082 09-75"
+							text="+7 (993) 891-77-47"
 							regExp={/[A-Za-z]/}
 							start={showPhone}
 						/>
@@ -51,7 +52,7 @@ const ContactSection: FC<IContactSectionProps> = ({}) => {
 							{showEmail ? <HiMailOpen /> : <HiMail />}
 						</Button>
 						<RollingContact
-							text="nikitatabalov@gmail.com"
+							text="info@gafurovproduction.ru"
 							regExp={/[A-Za-z]/}
 							start={showEmail}
 						/>
@@ -67,7 +68,7 @@ const ContactSection: FC<IContactSectionProps> = ({}) => {
 							<AiOutlineLink />
 						</Button>
 						<div className={styles.links}>
-							<a
+							{/* <a
 								className={styles.youtube}
 								style={{
 									opacity: showSocialNetworks ? 1 : 0,
@@ -77,8 +78,21 @@ const ContactSection: FC<IContactSectionProps> = ({}) => {
 								}}
 							>
 								<FaYoutube />
+							</a> */}
+							<a
+								href="https://wa.me/message/YTTEWVZXY6SXG1"
+								className={styles.whatsApp}
+								style={{
+									opacity: showSocialNetworks ? 1 : 0,
+									cursor: !showSocialNetworks
+										? 'auto'
+										: 'pointer',
+								}}
+							>
+								<FaWhatsapp />
 							</a>
 							<a
+								href="https://www.instagram.com/gafurovproduction?igsh=N3R6dXdtemg2czRs"
 								className={styles.instagram}
 								style={{
 									left: showSocialNetworks
@@ -92,7 +106,8 @@ const ContactSection: FC<IContactSectionProps> = ({}) => {
 							>
 								<FaInstagram />
 							</a>
-							<a
+							{/* <a
+								href=""
 								className={styles.telegram}
 								style={{
 									left: showSocialNetworks
@@ -105,6 +120,21 @@ const ContactSection: FC<IContactSectionProps> = ({}) => {
 								}}
 							>
 								<FaTelegram />
+							</a> */}
+							<a
+								href="https://vk.com/gafurovproduction"
+								className={styles.vkontakte}
+								style={{
+									left: showSocialNetworks
+										? 'calc(var(--index) * 10)'
+										: '0',
+									opacity: showSocialNetworks ? 1 : 0,
+									cursor: !showSocialNetworks
+										? 'auto'
+										: 'pointer',
+								}}
+							>
+								<SlSocialVkontakte />
 							</a>
 						</div>
 					</div>

@@ -17,7 +17,6 @@ const TypingIntoBrowser: FC<PropsWithChildren<ITypingIntoBrowserProps>> = ({
 	speed,
 	loadingTime,
 	children,
-	startAnimation,
 }) => {
 	const [isLoaded, setIsLoaded] = useState<boolean>(false);
 
@@ -26,7 +25,7 @@ const TypingIntoBrowser: FC<PropsWithChildren<ITypingIntoBrowserProps>> = ({
 	}, [children, loadingTime, speed, text]);
 
 	useEffect(() => {
-		const timeout = setTimeout(() => {
+		setTimeout(() => {
 			setIsLoaded(true);
 		}, loadingTime * 1000);
 	}, [loadingTime]);

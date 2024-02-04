@@ -36,28 +36,20 @@ const Switch: FC<ISwitchProps> = ({
 		}
 	};
 	return (
-		<div className={styles.switch}>
-			<div className={styles.switchInner} onClick={switchFunc}>
-				<div
-					className={styles.circle}
-					style={{
-						right: `${value ? -2.2 : -0.3}em`,
-						transition: '0.3s',
-					}}
-				>
-					{value ? (
-						iconOn ? (
-							iconOn
-						) : (
-							<></>
-						)
-					) : iconOff ? (
-						iconOff
-					) : (
-						<></>
-					)}
+		<div className={styles.switchWrapper}>
+			<div className={styles.iconWrapper}>{iconOff}</div>
+			<div className={styles.switch}>
+				<div className={styles.switchInner} onClick={switchFunc}>
+					<div
+						className={styles.circle}
+						style={{
+							right: `${value ? -2.2 : -0.3}em`,
+							transition: '0.3s',
+						}}
+					/>
 				</div>
 			</div>
+			<div className={styles.iconWrapper}>{iconOn}</div>
 		</div>
 	);
 };

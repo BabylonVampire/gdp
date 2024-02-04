@@ -1,6 +1,5 @@
 import ServiceTab from '../pages/MainPage/components/ServicesSection/components/ServiceTab/ServiceTab';
-import { cardPulls } from './cardPulls';
-import { web, video, design } from './services';
+import { web, video, design, marketing } from './services';
 import { skullIcon, palette, camera } from './icons';
 export const components = [
 	{
@@ -13,7 +12,7 @@ export const components = [
 			<ServiceTab tabContent={web} icon={skullIcon} />
 			// </TypingIntoBrowser>
 		),
-		name: cardPulls.web.name,
+		name: 'Разработка',
 	},
 	{
 		component: (
@@ -25,7 +24,7 @@ export const components = [
 			<ServiceTab tabContent={video} icon={palette} />
 			// </TypingIntoBrowser>
 		),
-		name: cardPulls.design.name,
+		name: 'Дизайн',
 	},
 	{
 		component: (
@@ -37,6 +36,18 @@ export const components = [
 			<ServiceTab tabContent={design} icon={camera} />
 			// </TypingIntoBrowser>
 		),
-		name: cardPulls.video.name,
+		name: 'Видеопродакшн',
+	},
+	{
+		component: (
+			// <TypingIntoBrowser
+			// 	text={cardPulls.video.name}
+			// 	speed={50}
+			// 	loadingTime={1}
+			// >
+			<ServiceTab tabContent={marketing} icon={camera} />
+			// </TypingIntoBrowser>
+		),
+		name: 'Маркетинг',
 	},
 ];

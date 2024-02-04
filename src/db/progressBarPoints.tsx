@@ -1,10 +1,14 @@
 import { IPoint } from '../types/IPoint';
-import { BiAccessibility } from 'react-icons/bi';
+import { VscServerProcess } from 'react-icons/vsc';
+import { GiConversation } from 'react-icons/gi';
+import { IoVideocam } from 'react-icons/io5';
+import { MdBusinessCenter } from 'react-icons/md';
+import { BsGraphUpArrow } from 'react-icons/bs';
 
 export const points: IPoint[] = [
 	{
 		point: {
-			icon: <BiAccessibility />,
+			icon: <GiConversation />,
 			heading: 'БРИФИНГ',
 			subText: '',
 		},
@@ -16,7 +20,7 @@ export const points: IPoint[] = [
 	},
 	{
 		point: {
-			icon: <BiAccessibility />,
+			icon: <MdBusinessCenter />,
 			heading: 'БРЕНДИНГ',
 			subText: '',
 		},
@@ -28,7 +32,7 @@ export const points: IPoint[] = [
 	},
 	{
 		point: {
-			icon: <BiAccessibility />,
+			icon: <VscServerProcess />,
 			heading: 'РАЗРАБОТКА',
 			subText: '',
 		},
@@ -40,7 +44,7 @@ export const points: IPoint[] = [
 	},
 	{
 		point: {
-			icon: <BiAccessibility />,
+			icon: <IoVideocam />,
 			heading: 'ВИДЕОПРОДАКШН',
 			subText: '',
 		},
@@ -52,7 +56,7 @@ export const points: IPoint[] = [
 	},
 	{
 		point: {
-			icon: <BiAccessibility />,
+			icon: <BsGraphUpArrow />,
 			heading: 'ПРОДВИЖЕНИЕ',
 			subText: '',
 		},

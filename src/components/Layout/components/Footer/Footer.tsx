@@ -1,8 +1,10 @@
 import { FC, memo } from 'react';
-import styles from './Footer.module.scss';
-import { FaTelegram, FaYoutube, FaInstagram } from 'react-icons/fa6';
-import { ILink } from '../../../../types/ILink';
+import { FaWhatsapp } from 'react-icons/fa';
+import { FaInstagram } from 'react-icons/fa6';
+import { SlSocialVkontakte } from 'react-icons/sl';
 import { v4 } from 'uuid';
+import { ILink } from '../../../../types/ILink';
+import styles from './Footer.module.scss';
 
 interface IFooterProps {
 	links: ILink[];
@@ -54,18 +56,32 @@ const Footer: FC<IFooterProps> = memo(({ links, contacts }) => {
 						<div className={styles.colHeading}>Наши соцсети</div>
 						<div className={styles.divider} />
 						<div className={styles.linkContainer}>
-							<a className={styles.outLink}>
+							{/* <a className={styles.outLink} href="">
 								<FaTelegram />
-							</a>
-							<a className={styles.outLink}>
+							</a> */}
+							{/* <a className={styles.outLink} href="">
 								<FaYoutube />
-							</a>
-							<a className={styles.outLink}>
+							</a> */}
+							<a
+								className={styles.outLink}
+								href="https://www.instagram.com/gafurovproduction?igsh=N3R6dXdtemg2czRs"
+							>
 								<FaInstagram />
+							</a>
+							<a
+								className={styles.outLink}
+								href="https://wa.me/message/YTTEWVZXY6SXG1"
+							>
+								<FaWhatsapp />
+							</a>
+							<a
+								className={styles.outLink}
+								href="https://vk.com/gafurovproduction"
+							>
+								<SlSocialVkontakte />
 							</a>
 						</div>
 					</div>
-					{/* <div className={styles.otherCol}><Logo /></div> */}
 				</div>
 			</div>
 			<div className={styles.copyright}>
