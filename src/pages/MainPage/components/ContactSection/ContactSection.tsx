@@ -1,4 +1,4 @@
-import { FC, useState } from 'react';
+import { useState } from 'react';
 import { AiOutlineLink } from 'react-icons/ai';
 import { FaWhatsapp } from 'react-icons/fa';
 import { FaInstagram, FaPhone, FaPhoneVolume } from 'react-icons/fa6';
@@ -9,9 +9,7 @@ import { classNames } from '../../../../components/utils/classNames';
 import styles from './ContactSection.module.scss';
 import RollingContact from './components/RollingContact/RollingContact';
 
-interface IContactSectionProps {}
-
-const ContactSection: FC<IContactSectionProps> = ({}) => {
+const ContactSection = () => {
 	const [showPhone, setShowPhone] = useState<boolean>(false);
 	const [showEmail, setShowEmail] = useState<boolean>(false);
 	const [showSocialNetworks, setShowSocialNetworks] =

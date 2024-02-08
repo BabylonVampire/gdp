@@ -51,9 +51,10 @@
 }
 
 .links {
+	height: calc(var(--index) * 4);
+	width: calc(var(--index) * 14);
 	position: relative;
 	display: flex;
-	height: 100%;
 	align-items: center;
 }
 
@@ -123,5 +124,23 @@
 @media (max-width: 700px) {
 	.innerBox {
 		width: 90%;
+	}
+}
+
+@media (max-width: 400px) {
+	.innerBox {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.contactBox {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.phones,
+	.email,
+	.socialNetwork {
+		flex-direction: column;
 	}
 }
