@@ -11,6 +11,7 @@ const BenefitsSection: FC<IBenefitsSectionProps> = ({}) => {
 	const [width, setWidth] = useState<number>(0);
 
 	useEffect(() => {
+		console.log('benef');
 		const handleResize = () => {
 			setWidth(document.body.scrollWidth);
 		};

@@ -1,32 +1,21 @@
-import { Dispatch, FC, SetStateAction, useEffect, useState } from 'react';
+import { Dispatch, FC, SetStateAction } from 'react';
 import styles from './Switch.module.scss';
 
 interface ISwitchProps {
 	onClick?: () => void;
 	value?: boolean;
 	setValue?: Dispatch<SetStateAction<boolean | undefined>>;
-	defaultState?: boolean;
 	iconOn?: React.ReactNode;
 	iconOff?: React.ReactNode;
 }
 
 const Switch: FC<ISwitchProps> = ({
 	onClick,
-	defaultState,
 	iconOn,
 	iconOff,
 	value,
 	setValue,
 }) => {
-	useEffect(() => {
-		if (!defaultState) {
-			defaultState = false;
-		}
-	}, [defaultState]);
-
-	if (!setValue) {
-		[value, setValue] = useState(defaultState);
-	}
 	const switchFunc = () => {
 		if (onClick) {
 			onClick();

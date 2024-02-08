@@ -16,6 +16,11 @@ const Layout: FC<PropsWithChildren> = memo(({ children }) => {
 
 	return (
 		<div className={styles.layout}>
+			<source
+				src="/src/assets/background/blurBack.mp4"
+				type="video/mp4"
+				className={styles.videoBack}
+			></source>
 			<BurgerMenu links={links} state={burger} setState={setBurger} />
 			<div
 				className={styles.mainLayoutBox}

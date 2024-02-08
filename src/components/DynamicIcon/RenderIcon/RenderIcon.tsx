@@ -1,7 +1,7 @@
-import { FC, memo, useEffect } from 'react';
-import styles from './RenderIcon.module.scss';
-import { replaceAll } from '../utils/replaceAll';
+import { FC, memo } from 'react';
 import { v4 } from 'uuid';
+import { replaceAll } from '../utils/replaceAll';
+import styles from './RenderIcon.module.scss';
 
 interface IRenderIconProps {
 	speed: number;
@@ -27,16 +27,8 @@ const RenderIcon: FC<IRenderIconProps> = memo(
 		changeIcon,
 		setIndex,
 	}) => {
-		let timeOut: number;
-
-		useEffect(() => {
-			return () => {
-				window.clearTimeout(timeOut);
-			};
-		}, [gradient, currentIcon]);
-
 		const changeIndex = (index: number) => {
-			timeOut = window.setTimeout(() => {
+			setTimeout(() => {
 				if (index === 0) {
 					changeIcon();
 					changeSymbol();

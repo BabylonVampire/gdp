@@ -9,11 +9,11 @@ export const points: IPoint[] = [
 	{
 		point: {
 			icon: <GiConversation />,
-			heading: 'БРИФИНГ',
+			heading: '',
 			subText: '',
 		},
 		description: {
-			heading: '',
+			heading: 'БРИФИНГ',
 			description:
 				'Ставим цели, анализируем ЦА и определяем концепцию, позиционирование бренда.',
 		},
@@ -21,11 +21,11 @@ export const points: IPoint[] = [
 	{
 		point: {
 			icon: <MdBusinessCenter />,
-			heading: 'БРЕНДИНГ',
+			heading: '',
 			subText: '',
 		},
 		description: {
-			heading: '',
+			heading: 'БРЕНДИНГ',
 			description:
 				'Воплощаем концепцию в жизнь, создавая имидж компании инструментами брендинга',
 		},
@@ -33,11 +33,11 @@ export const points: IPoint[] = [
 	{
 		point: {
 			icon: <VscServerProcess />,
-			heading: 'РАЗРАБОТКА',
+			heading: '',
 			subText: '',
 		},
 		description: {
-			heading: '',
+			heading: 'РАЗРАБОТКА',
 			description:
 				'Создаем сайты и приложения, соблюдая фирменный стиль и задачи заказчика',
 		},
@@ -45,11 +45,11 @@ export const points: IPoint[] = [
 	{
 		point: {
 			icon: <IoVideocam />,
-			heading: 'ВИДЕОПРОДАКШН',
+			heading: '',
 			subText: '',
 		},
 		description: {
-			heading: '',
+			heading: 'ВИДЕОПРОДАКШН',
 			description:
 				'Продюсируем рекламные ролики, интервью и контент для социальных сетей',
 		},
@@ -57,11 +57,11 @@ export const points: IPoint[] = [
 	{
 		point: {
 			icon: <BsGraphUpArrow />,
-			heading: 'ПРОДВИЖЕНИЕ',
+			heading: '',
 			subText: '',
 		},
 		description: {
-			heading: '',
+			heading: 'ПРОДВИЖЕНИЕ',
 			description:
 				'Обеспечиваем бизнес клиентами используя современные инструменты маркетинга',
 		},

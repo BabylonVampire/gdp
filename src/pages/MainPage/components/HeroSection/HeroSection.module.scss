@@ -18,3 +18,12 @@
 		flex: 1;
 	}
 }
+
+.subHeading {
+	transition: 2s;
+	margin-top: 10px;
+	font-family: var(--font-family-sunLogo);
+	letter-spacing: calc(var(--font-size-s) * 0.8);
+	color: var(--font-color-secondary);
+	font-size: calc(var(--font-size-s) * 1.2);
+}

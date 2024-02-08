@@ -1,12 +1,9 @@
-import { FC } from 'react';
-import styles from './PortfolioSection.module.scss';
 import Tabs from '../../../../components/Tabs/Tabs';
-import WebSiteTab from './components/WebSiteTab/WebSiteTab';
+import styles from './PortfolioSection.module.scss';
 import VideoTab from './components/VideoTab/VideoTab';
+import WebSiteTab from './components/WebSiteTab/WebSiteTab';
 
-interface IPortfolioSectionProps {}
-
-const PortfolioSection: FC<IPortfolioSectionProps> = ({}) => {
+const PortfolioSection = () => {
 	return (
 		<div className={styles.PortfolioSection}>
 			<Tabs
@@ -20,17 +17,17 @@ const PortfolioSection: FC<IPortfolioSectionProps> = ({}) => {
 										description:
 											'Пример многостраничного интернет-магазина',
 										sitePic:
-											'/src/assets/portfolio/sites/sypGr.png',
+											'https://imgbly.com/ib/GFSyXHoDsK.png',
 										sitePicPhone:
-											'/src/assets/portfolio/sites/sypGrPhone.png',
+											'https://imgbly.com/ib/OMWezzoceL.png',
 									},
 									{
 										title: 'Развитие',
 										description: 'Пример сайта-визитки',
 										sitePic:
-											'/src/assets/portfolio/sites/razvitie.png',
+											'https://imgbly.com/ib/0akwwLN5B0.png',
 										sitePicPhone:
-											'/src/assets/portfolio/sites/razvitiePhone.png',
+											'https://imgbly.com/ib/N9TUT9OkYf.png',
 									},
 									// {
 									// 	title: 'Тема Бар',
@@ -68,10 +65,10 @@ const PortfolioSection: FC<IPortfolioSectionProps> = ({}) => {
 						),
 						name: 'Видео',
 					},
-					{
-						component: <></>,
-						name: 'Дизайн',
-					},
+					// {
+					// 	component: <></>,
+					// 	name: 'Дизайн',
+					// },
 				]}
 			/>
 		</div>

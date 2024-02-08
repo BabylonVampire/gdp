@@ -3,27 +3,12 @@ import styles from './GlitchedHeading.module.scss';
 
 interface IGlitchedHeadingProps {
 	heading: string;
-	fontSize: string;
 	style?: React.CSSProperties | undefined;
 }
 
-const GlitchedHeading: FC<IGlitchedHeadingProps> = ({
-	style,
-	heading,
-	fontSize,
-}) => {
+const GlitchedHeading: FC<IGlitchedHeadingProps> = ({ style, heading }) => {
 	return (
-		<div
-			className={styles.glitch}
-			data-text={heading}
-			style={Object.assign(
-				{
-					fontSize: fontSize,
-					lineHeight: fontSize,
-				},
-				style
-			)}
-		>
+		<div className={styles.glitch} data-text={heading} style={style}>
 			{heading}
 		</div>
 	);
