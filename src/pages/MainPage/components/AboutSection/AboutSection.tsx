@@ -1,5 +1,4 @@
 import { FC } from 'react';
-import TypingText from '../../../../components/TypingText/TypingText';
 import styles from './AboutSection.module.scss';
 
 interface IAboutSectionProps {}

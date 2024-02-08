@@ -61,6 +61,7 @@ const WebSiteCard: FC<IWebSiteCardProps> = ({ card }) => {
 				</div>
 				<div className={styles.sitePicWrapper}>
 					<img
+						loading="lazy"
 						className={styles.sitePic}
 						src={mode ? card.sitePicPhone : card.sitePic}
 						alt={card.title}
