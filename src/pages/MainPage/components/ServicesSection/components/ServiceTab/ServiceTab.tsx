@@ -18,7 +18,10 @@ const ServiceTab: FC<IServiceTabProps> = ({ tabContent, icon }) => {
 		<div className={styles.ServiceTab} key={v4()}>
 			<div
 				className={styles.backGround}
-				style={{ filter: theme.id === 0 ? 'invert(0)' : 'invert(1)' }}
+				style={{
+					filter: theme.id === 0 ? 'invert(0)' : 'invert(1)',
+					WebkitFilter: theme.id === 0 ? 'invert(0)' : 'invert(1)',
+				}}
 			/>
 			<div className={styles.innerBox}>
 				<DynamicIcon iconProps={icon} />

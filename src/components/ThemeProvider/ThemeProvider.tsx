@@ -19,6 +19,8 @@ const ThemeProvider: FC<PropsWithChildren<IThemeProviderProps>> = ({
 			className={styles.themeProvider}
 			style={{
 				backdropFilter: theme.id === 0 ? 'invert(0)' : 'invert(1)',
+				WebkitBackdropFilter:
+					theme.id === 0 ? 'invert(0)' : 'invert(1)',
 			}}
 		>
 			{children}

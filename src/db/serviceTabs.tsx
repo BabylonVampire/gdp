@@ -1,6 +1,7 @@
 import ServiceTab from '../pages/MainPage/components/ServicesSection/components/ServiceTab/ServiceTab';
 import { web, video, design, marketing } from './services';
 import { skullIcon, palette, camera } from './icons';
+import { lamp } from './icons';
 export const components = [
 	{
 		component: (
@@ -36,7 +37,7 @@ export const components = [
 			<ServiceTab tabContent={design} icon={camera} />
 			// </TypingIntoBrowser>
 		),
-		name: 'Видеопродакшн',
+		name: 'Видео',
 	},
 	{
 		component: (
@@ -45,7 +46,7 @@ export const components = [
 			// 	speed={50}
 			// 	loadingTime={1}
 			// >
-			<ServiceTab tabContent={marketing} icon={camera} />
+			<ServiceTab tabContent={marketing} icon={lamp} />
 			// </TypingIntoBrowser>
 		),
 		name: 'Маркетинг',
