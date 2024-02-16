@@ -1,7 +1,7 @@
 .contactSection {
 	width: 100%;
 	min-height: 50vh;
-	padding: calc(var(--index) * 2) 0;
+	padding: 40px 0;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -12,13 +12,13 @@
 	height: 90%;
 	display: flex;
 	flex-direction: row;
-	gap: calc(var(--index));
+	gap: 20px;
 }
 
 .contactBox {
 	display: flex;
 	flex-direction: column;
-	gap: calc(var(--index));
+	gap: 20px;
 }
 
 .phoneIcon {
@@ -35,7 +35,7 @@
 .phones,
 .email,
 .socialNetwork {
-	gap: calc(var(--index));
+	gap: 20px;
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-start;
@@ -70,7 +70,7 @@
 	height: calc(var(--index) * 4);
 	align-items: center;
 	justify-content: center;
-	font-size: calc(var(--font-size-xl) * 1.2);
+	font-size: var(--font-size-xl);
 	color: var(--font-color-main);
 	cursor: pointer;
 }

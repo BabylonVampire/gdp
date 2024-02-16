@@ -2,7 +2,6 @@ import { FC, memo } from 'react';
 import { FaWhatsapp } from 'react-icons/fa';
 import { FaInstagram } from 'react-icons/fa6';
 import { SlSocialVkontakte } from 'react-icons/sl';
-import { v4 } from 'uuid';
 import { ILink } from '../../../../types/ILink';
 import styles from './Footer.module.scss';
 
@@ -25,7 +24,10 @@ const Footer: FC<IFooterProps> = memo(({ links, contacts }) => {
 						<div className={styles.divider} />
 						{links.map((link) => {
 							return (
-								<li className={styles.option} key={v4()}>
+								<li
+									className={styles.option}
+									key={`footerLink_${link.heading}_${link.link}`}
+								>
 									<a href={link.link} className={styles.link}>
 										{link.heading}
 									</a>
@@ -39,14 +41,20 @@ const Footer: FC<IFooterProps> = memo(({ links, contacts }) => {
 						<div className={styles.divider} />
 						{contacts.phones.map((phone) => {
 							return (
-								<li className={styles.contact} key={v4()}>
+								<li
+									className={styles.contact}
+									key={`footerPhone_${phone}`}
+								>
 									{phone}
 								</li>
 							);
 						})}
 						{contacts.emails.map((email) => {
 							return (
-								<li className={styles.contact} key={v4()}>
+								<li
+									className={styles.contact}
+									key={`footerEmail_${email}`}
+								>
 									{email}
 								</li>
 							);

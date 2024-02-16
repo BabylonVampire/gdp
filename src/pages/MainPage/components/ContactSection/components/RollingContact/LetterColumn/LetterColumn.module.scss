@@ -10,3 +10,21 @@
 	user-select: none;
 	line-height: calc(var(--font-size-m) * 1.8);
 }
+
+@media (max-width: 550px) {
+	.letterColumn {
+		font-size: calc(var(--font-size-m) * 1.25);
+	}
+}
+
+@media (max-width: 450px) {
+	.letterColumn {
+		font-size: calc(var(--font-size-m) * 1);
+	}
+}
+
+@media (max-width: 400px) {
+	.letterColumn {
+		font-size: calc(var(--font-size-m) * 1.5);
+	}
+}

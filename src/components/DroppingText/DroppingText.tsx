@@ -38,7 +38,6 @@ const DroppingText: FC<IDroppingTextProps> = ({
 				className={styles.text}
 				style={{ maxHeight: drop ? '10lh' : '0' }}
 			>
-				<div className={styles.thinDivider} />
 				{droppingText}
 			</div>
 		</div>

@@ -21,7 +21,8 @@ const RollingContact: FC<IRollingContactProps> = ({ text, regExp, start }) => {
 				{text.split('').map((letter, index) => {
 					return (
 						<LetterColumn
-							key={`${letter} ${index} ${text}`}
+							key={`${letter}_${index}_${text}`}
+							columnKey={text}
 							defaultLetter={letter}
 							alphabet={alphabet}
 							start={startAnim}

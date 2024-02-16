@@ -43,13 +43,3 @@
 .link:hover {
 	scale: 1.075;
 }
-
-@media (max-width: 500px) {
-	.heading {
-		font-size: calc(var(--font-size-xl) * 0.8);
-	}
-	.link {
-		margin: calc(var(--index)) 0;
-		font-size: calc(var(--font-size-l) * 0.8);
-	}
-}

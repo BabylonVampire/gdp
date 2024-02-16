@@ -1,17 +1,13 @@
-import { FC, useEffect, useState } from 'react';
-import styles from './BenefitsSection.module.scss';
-import CardsGallery from './components/CardsGallery/CardGallery';
+import { useEffect, useState } from 'react';
 import { benefitsCards } from '../../../../db/servicesCards';
-import { v4 } from 'uuid';
+import styles from './BenefitsSection.module.scss';
 import BenefitCard from './components/BenefitCard/BenefitCard';
+import CardsGallery from './components/CardsGallery/CardGallery';
 
-interface IBenefitsSectionProps {}
-
-const BenefitsSection: FC<IBenefitsSectionProps> = ({}) => {
+const BenefitsSection = () => {
 	const [width, setWidth] = useState<number>(0);
 
 	useEffect(() => {
-		console.log('benef');
 		const handleResize = () => {
 			setWidth(document.body.scrollWidth);
 		};
@@ -30,7 +26,7 @@ const BenefitsSection: FC<IBenefitsSectionProps> = ({}) => {
 				<div className={styles.verticalCardContainer}>
 					{benefitsCards.map((card) => (
 						<BenefitCard
-							key={v4()}
+							key={`benefitCard_${card.heading}`}
 							heading={card.heading}
 							text={card.text}
 							Icon={card.Icon}

@@ -12,14 +12,14 @@
 	display: flex;
 	align-items: center;
 	& > p {
-		margin-inline-start: calc(var(--index));
+		margin-inline-start: 20px;
 	}
 }
 .FooterContainer {
-	width: calc(100vw - 6px);
+	width: 100%;
 	max-width: 1600px;
 	margin: 0 auto;
-	padding: calc(var(--index)) 0;
+	padding: 20px 0;
 	display: flex;
 	justify-content: center;
 }
@@ -48,7 +48,7 @@
 	font-size: var(--font-size-sm);
 }
 .outLink {
-	margin: calc(var(--index) * 0.5) calc(var(--index) * 0.3);
+	margin: 10px 6px;
 	color: #fff;
 	font-size: var(--font-size-l);
 	cursor: pointer;
@@ -65,7 +65,7 @@
 	flex-direction: column;
 	justify-content: flex-start;
 	> * {
-		margin: calc(var(--index) * 0.2);
+		margin: 4px;
 	}
 }
 
@@ -87,7 +87,7 @@
 	width: 20%;
 	height: 4px;
 	background-color: var(--font-color-code);
-	margin: calc(var(--index) * 0.3);
+	margin: 6px;
 }
 
 @media (max-width: 700px) {
@@ -96,7 +96,7 @@
 	}
 }
 
-@media (max-width: 500px) {
+@media (max-width: 650px) {
 	.outLink {
 		font-size: calc(var(--font-size-l) * 1.5);
 	}
@@ -109,7 +109,7 @@
 	.optionsCol,
 	.contactsCol,
 	.linksCol {
-		margin: calc(var(--index)) 0;
+		margin: 20px 0;
 		align-items: center;
 		& > * {
 			list-style: none;

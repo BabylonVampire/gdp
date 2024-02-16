@@ -15,7 +15,7 @@
 
 .leftColumn,
 .rightColumn {
-	padding: calc(var(--index)) calc(var(--index) * 2);
+	padding: 10px 20px;
 	height: 100%;
 	display: flex;
 	flex-direction: column;
@@ -33,7 +33,7 @@
 }
 
 .barLine {
-	width: calc(var(--index) * 0.5);
+	width: 10px;
 	height: 100%;
 	background-color: var(--color-frame-main);
 	border-radius: 7px;
@@ -51,11 +51,11 @@
 	text-align: end;
 	color: var(--font-color-main);
 	font-family: var(--font-family-main);
-	padding: calc(var(--index) * 0.5);
+	padding: 10px;
 }
 
 .heading {
-	font-size: calc(var(--index) * 1.4);
+	font-size: var(--font-size-m);
 	transition: 0.3s;
 }
 
@@ -70,8 +70,8 @@
 	display: flex;
 	top: 0;
 	position: absolute;
-	width: calc(var(--index) * 3.5);
-	height: calc(var(--index) * 3.5);
+	width: 70px;
+	height: 70px;
 	background-color: var(--color-frame-main);
 	box-shadow: inset 0 0 7px 0 var(--color-frame-shadow);
 	border-radius: 7px;
@@ -84,18 +84,10 @@
 	transition: 0.5s;
 }
 
-.backDrop {
-	top: calc(var(--index) * 0.5);
-	position: absolute;
-	height: calc(var(--index) * 3.5);
-	background-color: var(--color-main);
-	transition: 0.3s;
-}
-
 .text {
 	color: var(--font-color-main);
 	font-family: var(--font-family-main);
-	padding: calc(var(--index) * 0.5);
+	padding: 10px;
 }
 
 .description {
@@ -106,7 +98,7 @@
 @media (max-width: 500px) {
 	.leftColumn,
 	.rightColumn {
-		padding: var(--index) calc(var(--index) * 0.5);
+		padding: 20px 10px;
 	}
 	.innerBox {
 		width: 95%;

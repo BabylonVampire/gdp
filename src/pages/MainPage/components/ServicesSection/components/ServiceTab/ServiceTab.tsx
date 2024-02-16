@@ -3,7 +3,6 @@ import styles from './ServiceTab.module.scss';
 import DynamicIcon from '@components/DynamicIcon/DynamicIcon';
 import { IIcon } from '../../../../../../types/IIcon';
 import { ITabContent } from '../../../../../../types/ITabContent';
-import { v4 } from 'uuid';
 import { useAppSelector } from '../../../../../../store/hooks/redux';
 import DroppingText from '@components/DroppingText/DroppingText';
 
@@ -15,7 +14,7 @@ interface IServiceTabProps {
 const ServiceTab: FC<IServiceTabProps> = ({ tabContent, icon }) => {
 	const { theme } = useAppSelector((state) => state.themeReducer);
 	return (
-		<div className={styles.ServiceTab} key={v4()}>
+		<div className={styles.ServiceTab}>
 			<div
 				className={styles.backGround}
 				style={{
@@ -32,13 +31,18 @@ const ServiceTab: FC<IServiceTabProps> = ({ tabContent, icon }) => {
 								return (
 									<div
 										className={styles.paragraphList}
-										key={v4()}
+										key={
+											paragraph.type +
+											paragraph.content[0].title
+										}
 									>
 										{paragraph.content.map(
 											(listElement) => {
 												return (
 													<div
-														key={v4()}
+														key={
+															listElement.description
+														}
 														className={
 															styles.listElement
 														}
@@ -62,7 +66,10 @@ const ServiceTab: FC<IServiceTabProps> = ({ tabContent, icon }) => {
 								return (
 									<div
 										className={styles.paragraphHeading}
-										key={v4()}
+										key={
+											paragraph.type +
+											paragraph.content[0].title
+										}
 									>
 										{paragraph.content[0].title}
 									</div>
@@ -72,7 +79,10 @@ const ServiceTab: FC<IServiceTabProps> = ({ tabContent, icon }) => {
 								return (
 									<div
 										className={styles.paragraphText}
-										key={v4()}
+										key={
+											paragraph.type +
+											paragraph.content[0].title
+										}
 									>
 										{paragraph.content[0].title}
 									</div>

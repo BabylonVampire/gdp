@@ -1,5 +1,4 @@
-import { FC, memo, useCallback, useEffect, useState } from 'react';
-import { v4 } from 'uuid';
+import { FC, memo, useCallback } from 'react';
 import { ICard } from '../../../../../../types/ICard';
 import BenefitCard from '../BenefitCard/BenefitCard';
 import styles from './CardsGallery.module.scss';
@@ -11,20 +10,13 @@ interface ICardGalleyProps {
 const CardsGallery: FC<ICardGalleyProps> = memo(({ cardPull }) => {
 	const rerenderCard = useCallback(
 		(card: ICard) => {
-			const [curCard, setCard] = useState<ICard | undefined>(undefined);
-			useEffect(() => {
-				setCard(card);
-				return () => {
-					setCard(undefined);
-				};
-			}, [card]);
-			if (curCard !== undefined) {
+			if (card !== undefined) {
 				return (
 					<BenefitCard
-						key={v4()}
-						heading={curCard.heading}
-						text={curCard.text}
-						Icon={curCard.Icon}
+						key={card.heading + card.text}
+						heading={card.heading}
+						text={card.text}
+						Icon={card.Icon}
 					/>
 				);
 			} else {

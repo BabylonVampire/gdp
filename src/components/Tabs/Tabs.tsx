@@ -1,7 +1,6 @@
 import { FC, useState } from 'react';
-import styles from './Tabs.module.scss';
-import { v4 } from 'uuid';
 import { ITab } from '../../types/ITab';
+import styles from './Tabs.module.scss';
 
 interface ITabsProps {
 	tabs: ITab[];
@@ -17,7 +16,7 @@ const Tabs: FC<ITabsProps> = ({ tabs }) => {
 					{tabs.map((tab) => {
 						return (
 							<div
-								key={v4()}
+								key={`tab_${tab.name}`}
 								className={
 									currentTab === tab.component
 										? styles.changePullBtnActive

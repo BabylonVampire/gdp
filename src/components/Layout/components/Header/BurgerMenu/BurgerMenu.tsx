@@ -49,6 +49,7 @@ const BurgerMenu: FC<IBurgerMenuProps> = ({ links, state, setState }) => {
 					{links.map((link) => {
 						return (
 							<a
+								key={link.link + link.heading}
 								href={link.link}
 								className={styles.link}
 								onClick={() => setState((prev) => !prev)}

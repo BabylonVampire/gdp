@@ -2,13 +2,13 @@
 	display: flex;
 	justify-content: center;
 	width: 100%;
-	margin: calc(var(--index)) 0;
+	margin: 20px 0;
 }
 .headingWrapper {
 	text-align: center;
 	width: fit-content;
 	height: 100%;
-	padding: calc(var(--index) * 1.5);
+	padding: 30px;
 	min-width: 40%;
 	border-radius: 7px;
 	background-color: var(--color-frame-main);

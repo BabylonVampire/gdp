@@ -2,6 +2,7 @@ import { FC, useState } from 'react';
 import styles from './WebSiteCard.module.scss';
 import Button from '../../../../../../GlassUI/Button/Button';
 import { HiComputerDesktop, HiOutlineDevicePhoneMobile } from 'react-icons/hi2';
+import { classNames } from '../../../../../../components/utils/classNames';
 
 interface IWebSiteCardProps {
 	card: {
@@ -16,11 +17,9 @@ const WebSiteCard: FC<IWebSiteCardProps> = ({ card }) => {
 	const [mode, setMode] = useState<boolean>(false);
 	return (
 		<div
-			className={styles.webSiteCard}
-			style={{
-				height: mode ? '85vw' : '40vw',
-				width: mode ? '40%' : '60%',
-			}}
+			className={classNames(styles.webSiteCard, {}, [
+				mode ? styles.phoneMode : styles.desktopMode,
+			])}
 		>
 			<div
 				className={styles.innerBox}

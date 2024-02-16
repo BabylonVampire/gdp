@@ -1,19 +1,18 @@
 import { FC, useCallback } from 'react';
 import styles from './LetterColumn.module.scss';
-import { v4 } from 'uuid';
 
 interface ILetterColumnProps {
 	defaultLetter: string;
 	alphabet: string[];
 	start: boolean;
-	// key?: string;
+	columnKey?: string;
 }
 
 const LetterColumn: FC<ILetterColumnProps> = ({
 	defaultLetter,
 	alphabet,
 	start,
-	// key,
+	columnKey,
 }) => {
 	const randomChar = useCallback(() => {
 		return alphabet[Math.floor(Math.random() * alphabet.length)]; // функция для генерации случайного символа
@@ -27,12 +26,21 @@ const LetterColumn: FC<ILetterColumnProps> = ({
 				transition: `${Math.random() * 2 + 1}s`,
 			}}
 		>
-			{[...Array(5)].map(() => (
-				<pre className={styles.letter} key={v4()}>
-					{randomChar()}
-				</pre>
-			))}
-			<pre className={styles.mainLetter} key={v4()}>
+			{[...Array(5)].map((_item, index) => {
+				const char = randomChar();
+				return (
+					<pre
+						className={styles.letter}
+						key={`randomLetter_${char}_${index}_${columnKey}`}
+					>
+						{char}
+					</pre>
+				);
+			})}
+			<pre
+				className={styles.mainLetter}
+				key={`headingLetter_${defaultLetter}_${columnKey}`}
+			>
 				{defaultLetter}
 			</pre>
 		</div>

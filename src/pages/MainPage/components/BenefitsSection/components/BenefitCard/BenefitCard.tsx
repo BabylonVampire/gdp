@@ -32,9 +32,10 @@ const BenefitCard: FC<IBenefitCardProps> = memo(({ text, heading, Icon }) => {
 				</div>
 				<div className={styles.contentBox}>
 					<div className={styles.heading}>
-						{headingAr.map((letter) => {
+						{headingAr.map((letter, index) => {
 							return (
 								<p
+									key={letter + index + text}
 									className={`${styles.letter} ${
 										falling ? styles.falling : ''
 									}`}

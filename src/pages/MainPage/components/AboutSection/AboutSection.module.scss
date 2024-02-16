@@ -4,15 +4,11 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	transition: 0.5s;
 }
 
 .innerBox {
 	width: 80%;
 	display: flex;
-	& > * {
-		flex: 1;
-	}
 }
 
 .aboutText {
@@ -48,15 +44,5 @@
 @media (max-width: 800px) {
 	.aboutSection {
 		min-height: 40vh;
-	}
-
-	.innerBox {
-		& > * {
-			flex: auto;
-		}
-	}
-
-	.imgBox {
-		display: none;
 	}
 }

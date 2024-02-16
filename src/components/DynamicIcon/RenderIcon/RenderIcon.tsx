@@ -1,7 +1,6 @@
 import { FC, memo } from 'react';
-import { v4 } from 'uuid';
-// import { replaceAll } from '../utils/replaceAll';
 import styles from './RenderIcon.module.scss';
+// import { replaceAll } from '../utils/replaceAll';
 
 interface IRenderIconProps {
 	speed: number;
@@ -20,7 +19,7 @@ const RenderIcon: FC<IRenderIconProps> = memo(
 		// speed,
 		// index,
 		currentIcon,
-		// currentSymbol,
+		currentSymbol,
 		// newSymbol,
 		// gradient,
 		// changeSymbol,
@@ -39,7 +38,7 @@ const RenderIcon: FC<IRenderIconProps> = memo(
 
 		return (
 			<>
-				{currentIcon.map((line) => {
+				{currentIcon.map((line, i) => {
 					// if (index + 1 < currentIcon.length) {
 					// 	changeIndex(index + 1);
 					// } else {
@@ -53,7 +52,10 @@ const RenderIcon: FC<IRenderIconProps> = memo(
 					// 	);
 					// }
 					return (
-						<p key={v4()} className={styles.iconLine}>
+						<p
+							key={line + i + currentSymbol}
+							className={styles.iconLine}
+						>
 							{line}
 						</p>
 					);

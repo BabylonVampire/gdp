@@ -15,7 +15,12 @@ const WebSiteTab: FC<IWebSiteTabProps> = ({ cards }) => {
 	return (
 		<div className={styles.webSiteTab}>
 			{cards.map((card) => {
-				return <WebSiteCard card={card} />;
+				return (
+					<WebSiteCard
+						key={card.title + card.description}
+						card={card}
+					/>
+				);
 			})}
 		</div>
 	);

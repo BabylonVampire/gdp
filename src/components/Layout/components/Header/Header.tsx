@@ -1,6 +1,5 @@
 import { FC, useEffect, useState } from 'react';
 import styles from './Header.module.scss';
-// import Logo from '@components/Logo/Logo';
 import Switch from '@components/Switch/Switch';
 import { darkTheme } from '@db/themes/darkTheme';
 import { lightTheme } from '@db/themes/lightTheme';
@@ -8,7 +7,6 @@ import { useAppDispatch } from '@store/hooks/redux';
 import { themeSlice } from '@store/reducers/ThemeSlice';
 import { HiOutlineMenu } from 'react-icons/hi';
 import { WiDaySunny, WiMoonAltWaxingCrescent3 } from 'react-icons/wi';
-import { v4 } from 'uuid';
 import { useAppSelector } from '../../../../store/hooks/redux';
 import { ILink } from '../../../../types/ILink';
 
@@ -62,14 +60,13 @@ const Header: FC<IHeaderProps> = ({ links, burgerCallBack, burgerState }) => {
 					iconOn={<WiDaySunny />}
 					iconOff={<WiMoonAltWaxingCrescent3 />}
 				/>
-				{/* <Logo /> */}
 				<div className={styles.linkBox}>
 					{links.map((link) => {
 						return (
 							<a
 								className={styles.link}
 								href={link.link}
-								key={v4()}
+								key={`header_${link.heading}_${link.link}`}
 							>
 								{link.heading}
 							</a>
