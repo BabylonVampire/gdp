@@ -90,3 +90,9 @@
 		width: 60%;
 	}
 }
+
+@media (max-width: 320px) {
+	.webSiteCard {
+		min-width: 240px;
+	}
+}

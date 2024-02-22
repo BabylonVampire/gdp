@@ -104,3 +104,16 @@
 		width: 95%;
 	}
 }
+
+@media (max-width: 300px) {
+	.leftColumn,
+	.rightColumn {
+		padding: 0;
+	}
+	.innerBox {
+		width: 100%;
+	}
+	.barLine {
+		display: none;
+	}
+}

@@ -14,18 +14,7 @@ const ThemeProvider: FC<PropsWithChildren<IThemeProviderProps>> = ({
 		changeTheme(theme);
 	}, [theme]);
 
-	return (
-		<div
-			className={styles.themeProvider}
-			style={{
-				backdropFilter: theme.id === 0 ? 'invert(0)' : 'invert(1)',
-				WebkitBackdropFilter:
-					theme.id === 0 ? 'invert(0)' : 'invert(1)',
-			}}
-		>
-			{children}
-		</div>
-	);
+	return <div className={styles.themeProvider}>{children}</div>;
 };
 
 export default ThemeProvider;

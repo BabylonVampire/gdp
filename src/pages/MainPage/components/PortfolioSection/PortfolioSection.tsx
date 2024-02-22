@@ -5,7 +5,7 @@ import WebSiteTab from './components/WebSiteTab/WebSiteTab';
 
 const PortfolioSection = () => {
 	return (
-		<div className={styles.PortfolioSection}>
+		<div className={styles.PortfolioSection} id="portfolio">
 			<Tabs
 				tabs={[
 					{

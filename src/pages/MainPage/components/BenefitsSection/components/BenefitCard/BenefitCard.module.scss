@@ -51,7 +51,7 @@
 	font-family: var(--font-family-heading);
 	display: inline-block;
 	color: var(--font-color-main);
-	font-size: var(--font-size-l);
+	font-size: calc(var(--font-size-l) * 0.75);
 	transition: 0.3s;
 
 	-webkit-touch-callout: none; /* iOS Safari */
@@ -116,6 +116,12 @@
 
 .appearingText {
 	opacity: 1;
+}
+
+@media (max-width: 1300px) {
+	.letter {
+		font-size: var(--font-size-l);
+	}
 }
 
 @media (max-width: 500px) {

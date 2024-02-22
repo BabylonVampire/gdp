@@ -45,17 +45,19 @@ const BurgerMenu: FC<IBurgerMenuProps> = ({ links, state, setState }) => {
 			<div className={styles.innerBox}>
 				<div className={styles.linkBox}>
 					<div className={styles.heading}>Навигация</div>
-					<div className={styles.divider} />
 					{links.map((link) => {
 						return (
-							<a
-								key={link.link + link.heading}
-								href={link.link}
-								className={styles.link}
-								onClick={() => setState((prev) => !prev)}
-							>
-								{link.heading}
-							</a>
+							<>
+								<div className={styles.divider} />
+								<a
+									key={link.link + link.heading}
+									href={link.link}
+									className={styles.link}
+									onClick={() => setState((prev) => !prev)}
+								>
+									{link.heading}
+								</a>
+							</>
 						);
 					})}
 				</div>

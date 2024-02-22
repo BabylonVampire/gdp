@@ -1,10 +1,9 @@
-import { FC } from 'react';
-import styles from './ServiceTab.module.scss';
 import DynamicIcon from '@components/DynamicIcon/DynamicIcon';
+import { FC } from 'react';
+import { useAppSelector } from '../../../../../../store/hooks/redux';
 import { IIcon } from '../../../../../../types/IIcon';
 import { ITabContent } from '../../../../../../types/ITabContent';
-import { useAppSelector } from '../../../../../../store/hooks/redux';
-import DroppingText from '@components/DroppingText/DroppingText';
+import styles from './ServiceTab.module.scss';
 
 interface IServiceTabProps {
 	icon: IIcon;
@@ -37,24 +36,33 @@ const ServiceTab: FC<IServiceTabProps> = ({ tabContent, icon }) => {
 										}
 									>
 										{paragraph.content.map(
-											(listElement) => {
+											(listElement, i) => {
 												return (
 													<div
 														key={
+															i +
 															listElement.description
 														}
 														className={
 															styles.listElement
 														}
 													>
-														<DroppingText
-															preview={
-																listElement.title
+														<h2
+															className={
+																styles.listElementHeading
 															}
-															droppingText={
+														>
+															{listElement.title}
+														</h2>
+														<p
+															className={
+																styles.listElementDescription
+															}
+														>
+															{
 																listElement.description
 															}
-														/>
+														</p>
 													</div>
 												);
 											}
