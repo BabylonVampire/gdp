@@ -26,7 +26,7 @@
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	width: 65%;
+	width: 55%;
 	justify-content: center;
 	float: right;
 }
@@ -75,6 +75,32 @@
 	background: transparent;
 	color: var(--font-color-main);
 	margin: 0 0.4em;
+}
+
+.outLinksBox {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 0 10px;
+}
+
+.outLink {
+	margin: 10px 6px;
+	color: #fff;
+	font-size: var(--font-size-ml);
+	cursor: pointer;
+	line-height: 0;
+}
+
+.phone {
+	line-height: 0;
+	margin-right: 15px;
+	margin-top: 3px;
+	font-size: var(--font-size-sm);
+	color: var(--font-color-main);
+	font-family: var(--font-family-heading);
+	text-decoration: none;
+	cursor: pointer;
 }
 
 @media (max-width: 1000px) {

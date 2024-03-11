@@ -1,10 +1,6 @@
 export const links = [
 	{
-		heading: 'Главная',
-		link: '#home',
-	},
-	{
-		heading: 'О Нас',
+		heading: 'О нас',
 		link: '#about',
 	},
 	{
@@ -12,7 +8,7 @@ export const links = [
 		link: '#Services',
 	},
 	{
-		heading: 'Наши работы',
+		heading: 'Проекты',
 		link: '#portfolio',
 	},
 	{

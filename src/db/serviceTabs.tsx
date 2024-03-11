@@ -22,7 +22,7 @@ export const components = [
 			// 	speed={50}
 			// 	loadingTime={1}
 			// >
-			<ServiceTab tabContent={video} icon={palette} />
+			<ServiceTab tabContent={design} icon={palette} />
 			// </TypingIntoBrowser>
 		),
 		name: 'Дизайн',
@@ -34,7 +34,7 @@ export const components = [
 			// 	speed={50}
 			// 	loadingTime={1}
 			// >
-			<ServiceTab tabContent={design} icon={camera} />
+			<ServiceTab tabContent={video} icon={camera} />
 			// </TypingIntoBrowser>
 		),
 		name: 'Видео',

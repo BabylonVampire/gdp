@@ -8,7 +8,16 @@ const HeroSection: FC<IHeroSectionProps> = () => {
 	return (
 		<div className={styles.heroSection} id="home">
 			<div className={styles.innerBox}>
+				<div className={styles.animationBox}>
+					<video className={styles.animation} autoPlay muted loop>
+						<source
+							src="/src/assets/animation.mp4"
+							type="video/mp4"
+						/>
+					</video>
+				</div>
 				<div className={styles.textBox}>
+					<div className={styles.background} />
 					<GlitchedHeading
 						heading="GAFUROV"
 						style={{
@@ -18,6 +27,21 @@ const HeroSection: FC<IHeroSectionProps> = () => {
 						}}
 					/>
 					<p className={styles.subHeading}>digital production</p>
+					<div className={styles.descriptionBox}>
+						<p className={styles.description}>
+							Команда Gafurov Production уже более 3 лет помогает
+							бизнесу комплексно решить вопрос создания успешного
+							и современного бренда.
+						</p>
+						<div className={styles.buttonBox}>
+							<button className={styles.openFormButton}>
+								Оставить заявку
+							</button>
+							<button className={styles.contactsButton}>
+								Связь с нами
+							</button>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>

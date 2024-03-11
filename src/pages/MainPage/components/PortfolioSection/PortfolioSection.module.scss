@@ -1,0 +1,181 @@
+.innerBox {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 20px;
+}
+
+.videoPortfolio {
+	width: 50%;
+	height: fit-content;
+}
+
+.descriptionBox {
+	width: 40%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.descriptionInnerBox {
+	width: 80%;
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	text-align: end;
+	align-items: flex-end;
+}
+
+.heading {
+	font-size: var(--font-size-l);
+	color: var(--font-color-main);
+	font-family: var(--font-family-heading);
+}
+
+.divider {
+	height: 5px;
+	width: 60%;
+	background-color: var(--font-color-secondary);
+	min-width: 100px;
+	margin-bottom: 15px;
+}
+
+.portfolioCarousel {
+	border-radius: 7px;
+	box-shadow: 0 0 17px 0 #fff;
+	overflow: hidden;
+}
+
+.description {
+	font-size: var(--font-size-m);
+	color: var(--font-color-secondary);
+	font-family: var(--font-family-main);
+}
+
+.buttonBox {
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
+}
+
+.button {
+	background-color: var(--color-frame-main);
+	box-shadow: inset 0 0 7px 0 var(--color-frame-shadow);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: var(--font-color-main);
+	font-size: var(--font-size-sm);
+	border-radius: 7px;
+	border: none;
+	position: relative;
+	overflow: hidden;
+	cursor: pointer;
+	padding: 15px 10px;
+	transition: 0.3s;
+}
+
+.button:hover {
+	background-color: rgba(255, 255, 255, 0.15);
+}
+
+.webPortfolio {
+	width: 45%;
+	padding-right: 20px;
+	height: fit-content;
+}
+
+.designPortfolio {
+	width: 45%;
+	padding-left: 20px;
+	height: fit-content;
+}
+
+.videoCard,
+.webCard {
+	border-radius: 7px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+}
+
+.iframeVideo {
+	width: 100%;
+	height: 400px;
+}
+
+.portfolioTitle {
+	font-size: var(--font-size-ml);
+	color: var(--font-color-main);
+	font-family: var(--font-family-heading);
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+
+.webCard {
+	padding-right: 1px;
+	width: 100%;
+	height: 400px;
+	overflow-y: scroll;
+	position: relative;
+	&Img {
+		position: absolute;
+		width: 100%;
+		top: 0;
+		left: 0;
+	}
+}
+
+.topLevel {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+}
+
+.bottomLevel {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+}
+
+@media (max-width: 1200px) {
+	.iframeVideo,
+	.webCard {
+		height: 300px;
+	}
+}
+
+@media (max-width: 1000px) {
+	.topLevel {
+		flex-direction: column-reverse;
+		gap: 20px;
+	}
+
+	.videoPortfolio,
+	.webPortfolio,
+	.designPortfolio,
+	.descriptionBox {
+		width: 90%;
+		padding: 0;
+	}
+
+	.iframeVideo,
+	.webCard {
+		height: 400px;
+	}
+
+	.bottomLevel {
+		flex-direction: column;
+		gap: 20px;
+	}
+}
+
+@media (max-width: 600px) {
+	.iframeVideo,
+	.webCard {
+		height: 300px;
+	}
+}

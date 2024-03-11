@@ -10,7 +10,7 @@ $switchHeight: 2.5em;
 }
 
 .iconWrapper {
-	margin-top: 15%;
+	line-height: 0;
 	font-size: calc($switchHeight * 0.75);
 	color: var(--font-color-code);
 }

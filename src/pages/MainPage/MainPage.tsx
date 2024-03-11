@@ -17,16 +17,17 @@ const MainPage: FC<IMainPageProps> = () => {
 	return (
 		<main className={styles.mainPage}>
 			<HeroSection />
-			<Heading text={'О Нас'} />
+			<Heading text={'О нас'} link="about" />
 			<AboutSection />
 			<Heading text={'Наши преимущества'} />
 			<BenefitsSection />
-			<Heading text={'Услуги'} />
+			<Heading text={'Услуги'} link="Services" />
 			<ServicesSection components={components} />
 			<Heading text={'Схема сотрудничества'} />
 			<VerticalProgressBar points={points} />
+			<Heading text={'Проекты'} link="portfolio" />
 			<PortfolioSection />
-			<Heading text={'Контакты'} />
+			<Heading text={'Контакты'} link="contacts" />
 			<ContactSection />
 		</main>
 	);

@@ -18,29 +18,42 @@
 .contactBox {
 	display: flex;
 	flex-direction: column;
-	gap: 20px;
+	gap: 30px;
 }
 
 .phoneIcon {
 	border-radius: 50%;
 	font-size: var(--font-size-l);
+	width: 100px;
+	height: 100px;
+	cursor: auto;
 }
 
 .emailIcon,
 .linkIcon {
 	border-radius: 7px;
 	font-size: var(--font-size-xl);
+	width: 100px;
+	height: 100px;
+	cursor: auto;
 }
 
 .phones,
 .email,
 .socialNetwork {
-	gap: 20px;
+	gap: 40px;
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-start;
 	align-items: center;
 	transition: 0.3s;
+}
+
+.link {
+	font-size: var(--font-size-ml);
+	color: var(--font-color-main);
+	font-family: var(--font-family-heading);
+	text-decoration: none;
 }
 
 .socialNetwork {
@@ -51,8 +64,6 @@
 }
 
 .links {
-	height: calc(var(--index) * 4);
-	width: calc(var(--index) * 14);
 	position: relative;
 	display: flex;
 	align-items: center;
@@ -65,7 +76,6 @@
 .vkontakte {
 	transition: 0.3s;
 	display: flex;
-	position: absolute;
 	width: calc(var(--index) * 4);
 	height: calc(var(--index) * 4);
 	align-items: center;
@@ -73,24 +83,7 @@
 	font-size: var(--font-size-xl);
 	color: var(--font-color-main);
 	cursor: pointer;
-}
-
-.telegram {
-	transition: opacity 0.4s ease-in-out, left 0.4s ease-in-out, scale 0.2s,
-		filter 0.2s;
-}
-
-.instagram {
-	transition: opacity 0.3s ease-in-out, left 0.3s ease-in-out, scale 0.2s,
-		filter 0.2s;
-}
-
-.whatsApp {
-	transition: opacity 0.6s ease-in-out, scale 0.2s, filter 0.2s;
-}
-
-.vkontakte {
-	transition: opacity 0.2s ease-in-out, scale 0.2s, filter 0.2s;
+	transition: 0.2s;
 }
 
 .telegram:hover {
@@ -121,26 +114,67 @@
 	scale: 1.05;
 }
 
-@media (max-width: 700px) {
-	.innerBox {
-		width: 90%;
+.glowingBtn_1 {
+	animation: pressMe 2s ease-in-out infinite forwards;
+}
+
+.glowingBtn_2 {
+	animation: pressMe 2s ease-in-out 0.5s infinite forwards;
+}
+
+.glowingBtn_3 {
+	animation: pressMe 2s ease-in-out 1s infinite forwards;
+}
+
+@-webkit-keyframes pressMe {
+	from {
+		box-shadow: 0 0 10px 0 #fff;
+	}
+
+	50% {
+		box-shadow: 0 0 20px 0 #fff;
+	}
+
+	to {
+		box-shadow: 0 0 10px 0 #fff;
 	}
 }
 
-@media (max-width: 400px) {
+@media (max-width: 700px) {
+	.emailIcon,
+	.linkIcon,
+	.phoneIcon {
+		width: 70px;
+		height: 70px;
+	}
+
 	.innerBox {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 	}
+
 	.contactBox {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 	}
+
 	.phones,
 	.email,
 	.socialNetwork {
 		flex-direction: column;
+	}
+}
+
+@media (max-width: 600px) {
+	.whatsApp,
+	.instagram,
+	.vkontakte {
+		font-size: calc(var(--font-size-xl) * 1.3);
+	}
+
+	.links {
+		gap: 10px;
 	}
 }

@@ -1,7 +1,6 @@
 .benefitCard {
-	width: 90%;
-	height: calc(var(--index) * 20);
-	min-height: 300px;
+	width: 40%;
+	height: 350px;
 	padding: 20px;
 }
 .innerBox {
@@ -119,6 +118,10 @@
 }
 
 @media (max-width: 1300px) {
+	.benefitCard {
+		width: 90%;
+	}
+
 	.letter {
 		font-size: var(--font-size-l);
 	}
@@ -127,5 +130,11 @@
 @media (max-width: 500px) {
 	.benefitCard {
 		width: 100%;
+	}
+}
+
+@media (max-width: 400px) {
+	.benefitCard {
+		height: 300px;
 	}
 }

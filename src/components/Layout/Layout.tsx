@@ -2,7 +2,6 @@ import { FC, PropsWithChildren, memo, useEffect, useState } from 'react';
 import styles from './layout.module.scss';
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
-import ThemeProvider from '../ThemeProvider/ThemeProvider';
 import { links } from '@db/links';
 import { contacts } from '@db/contacts';
 import BurgerMenu from './components/Header/BurgerMenu/BurgerMenu';
@@ -29,7 +28,7 @@ const Layout: FC<PropsWithChildren> = memo(({ children }) => {
 					burgerCallBack={setBurger}
 					burgerState={burger}
 				/>
-				<ThemeProvider>{children}</ThemeProvider>
+				{children}
 				<Footer links={links} contacts={contacts} />
 			</div>
 		</div>

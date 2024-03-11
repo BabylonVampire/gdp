@@ -21,7 +21,7 @@
 .heading {
 	color: var(--font-color-main);
 	font-family: var(--font-family-heading);
-	font-size: var(--font-size-xl);
+	font-size: calc(var(--font-size-xl) * 0.8);
 	transition: 0.2s;
 	margin: 0.4em 0;
 }

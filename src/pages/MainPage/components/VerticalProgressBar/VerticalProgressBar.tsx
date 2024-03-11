@@ -45,22 +45,6 @@ const VerticalProgressBar: FC<IVerticalProgressBarProps> = ({ points }) => {
 								>
 									{point.point.icon}
 								</div>
-								<div
-									className={styles.heading}
-									style={{
-										opacity: clickState === index ? 1 : 0,
-									}}
-								>
-									{point.point.heading}
-								</div>
-								<div
-									className={styles.subText}
-									style={{
-										opacity: clickState === index ? 1 : 0,
-									}}
-								>
-									{point.point.subText}
-								</div>
 							</div>
 						) : (
 							<div
@@ -134,22 +118,6 @@ const VerticalProgressBar: FC<IVerticalProgressBarProps> = ({ points }) => {
 									}}
 								>
 									{point.point.icon}
-								</div>
-								<div
-									className={styles.heading}
-									style={{
-										opacity: clickState === index ? 1 : 0,
-									}}
-								>
-									{point.point.heading}
-								</div>
-								<div
-									className={styles.subText}
-									style={{
-										opacity: clickState === index ? 1 : 0,
-									}}
-								>
-									{point.point.subText}
 								</div>
 							</div>
 						) : (

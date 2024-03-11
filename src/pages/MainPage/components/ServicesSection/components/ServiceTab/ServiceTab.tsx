@@ -1,6 +1,5 @@
 import DynamicIcon from '@components/DynamicIcon/DynamicIcon';
 import { FC } from 'react';
-import { useAppSelector } from '../../../../../../store/hooks/redux';
 import { IIcon } from '../../../../../../types/IIcon';
 import { ITabContent } from '../../../../../../types/ITabContent';
 import styles from './ServiceTab.module.scss';
@@ -11,18 +10,13 @@ interface IServiceTabProps {
 }
 
 const ServiceTab: FC<IServiceTabProps> = ({ tabContent, icon }) => {
-	const { theme } = useAppSelector((state) => state.themeReducer);
 	return (
 		<div className={styles.ServiceTab}>
-			<div
-				className={styles.backGround}
-				style={{
-					filter: theme.id === 0 ? 'invert(0)' : 'invert(1)',
-					WebkitFilter: theme.id === 0 ? 'invert(0)' : 'invert(1)',
-				}}
-			/>
+			<div className={styles.backGround} />
 			<div className={styles.innerBox}>
-				<DynamicIcon iconProps={icon} />
+				<div className={styles.dynamicIconWrapper}>
+					<DynamicIcon iconProps={icon} />
+				</div>
 				<div className={styles.contentBox}>
 					{tabContent.tabContent.map((paragraph) => {
 						switch (paragraph.type) {

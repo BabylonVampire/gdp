@@ -7,9 +7,15 @@ interface IRollingContactProps {
 	text: string;
 	regExp: RegExp;
 	start: boolean;
+	href?: string;
 }
 
-const RollingContact: FC<IRollingContactProps> = ({ text, regExp, start }) => {
+const RollingContact: FC<IRollingContactProps> = ({
+	text,
+	regExp,
+	start,
+	href = '',
+}) => {
 	const alphabet: string[] = useMemo(() => regExpToArray(regExp), [regExp]);
 	const [startAnim, setStart] = useState<boolean>(false);
 	useEffect(() => {
@@ -18,17 +24,21 @@ const RollingContact: FC<IRollingContactProps> = ({ text, regExp, start }) => {
 	return (
 		<div className={styles.rollingContact}>
 			<div className={styles.innerBox}>
-				{text.split('').map((letter, index) => {
-					return (
-						<LetterColumn
-							key={`${letter}_${index}_${text}`}
-							columnKey={text}
-							defaultLetter={letter}
-							alphabet={alphabet}
-							start={startAnim}
-						/>
-					);
-				})}
+				{start && (
+					<a className={styles.linkBox} href={href}>
+						{text.split('').map((letter, index) => {
+							return (
+								<LetterColumn
+									key={`${letter}_${index}_${text}`}
+									columnKey={text}
+									defaultLetter={letter}
+									alphabet={alphabet}
+									start={startAnim}
+								/>
+							);
+						})}
+					</a>
+				)}
 			</div>
 		</div>
 	);

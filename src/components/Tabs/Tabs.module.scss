@@ -45,3 +45,13 @@
 .changePullBtn:hover {
 	background-color: var(--color-frame-main-active);
 }
+
+@media (max-width: 550px) {
+	.innerBox {
+		width: 100%;
+	}
+
+	.cardPullSelection {
+		width: 100%;
+	}
+}

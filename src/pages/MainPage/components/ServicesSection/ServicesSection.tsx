@@ -9,7 +9,7 @@ interface IServicesSectionProps {
 
 const ServicesSection: FC<IServicesSectionProps> = ({ components }) => {
 	return (
-		<div className={styles.ServicesSection} id="Services">
+		<div className={styles.ServicesSection}>
 			<Tabs tabs={components} />
 		</div>
 	);

@@ -3,21 +3,15 @@ import styles from './Heading.module.scss';
 
 interface IHeadingProps {
 	text: string;
-	description?: string;
+	link?: string;
 }
 
-const Heading: FC<IHeadingProps> = ({ text, description }) => {
+const Heading: FC<IHeadingProps> = ({ text, link }) => {
 	return (
-		<div className={styles.heading}>
+		<div className={styles.heading} id={link}>
 			<div className={styles.headingWrapper}>
 				<div className={styles.headingText}>{text}</div>
-				{description ? (
-					<div className={styles.headingDescription}>
-						{description}
-					</div>
-				) : (
-					<></>
-				)}
+				<div className={styles.divider} />
 			</div>
 		</div>
 	);
