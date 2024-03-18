@@ -10,10 +10,7 @@ const HeroSection: FC<IHeroSectionProps> = () => {
 			<div className={styles.innerBox}>
 				<div className={styles.animationBox}>
 					<video className={styles.animation} autoPlay muted loop>
-						<source
-							src="/src/assets/animation.mp4"
-							type="video/mp4"
-						/>
+						<source src="" type="video/mp4" />
 					</video>
 				</div>
 				<div className={styles.textBox}>
@@ -34,12 +31,12 @@ const HeroSection: FC<IHeroSectionProps> = () => {
 							и современного бренда.
 						</p>
 						<div className={styles.buttonBox}>
-							<button className={styles.openFormButton}>
+							<a
+								className={styles.contactsButton}
+								href="#contacts"
+							>
 								Оставить заявку
-							</button>
-							<button className={styles.contactsButton}>
-								Связь с нами
-							</button>
+							</a>
 						</div>
 					</div>
 				</div>

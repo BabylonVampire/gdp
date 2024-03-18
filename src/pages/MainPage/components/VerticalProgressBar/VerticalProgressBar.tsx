@@ -60,7 +60,7 @@ const VerticalProgressBar: FC<IVerticalProgressBarProps> = ({ points }) => {
 								<div className={styles.description}>
 									<TypingText
 										text={point.description.description}
-										speed={50}
+										speed={30}
 										start={clickState === index}
 										style={{
 											color: 'var(--font-color-secondary)',
@@ -134,7 +134,7 @@ const VerticalProgressBar: FC<IVerticalProgressBarProps> = ({ points }) => {
 								<div className={styles.description}>
 									<TypingText
 										text={point.description.description}
-										speed={50}
+										speed={30}
 										start={clickState === index}
 										style={{
 											color: 'var(--font-color-secondary)',

@@ -145,6 +145,7 @@ const PortfolioSection = () => {
 							{links.map((link) => {
 								return (
 									<CarouselSlide
+										key={link.title + link.child.content}
 										toggleModal={toggleModal}
 										setModalContent={() =>
 											setModalContent(link)
@@ -153,7 +154,6 @@ const PortfolioSection = () => {
 										<div className={styles.videoCard}>
 											<iframe
 												className={styles.iframeVideo}
-												loading="lazy"
 												frameBorder={0}
 												src={`${link.child.content}&controls=0&modestbranding=1&rel=0&showinfo=0&disablekb=1`}
 												title="YouTube video player"
@@ -176,9 +176,9 @@ const PortfolioSection = () => {
 								<button className={styles.button}>
 									Скачать файл
 								</button>
-								<button className={styles.button}>
+								<a className={styles.button} href="#contacts">
 									Связь с нами
-								</button>
+								</a>
 							</div>
 						</div>
 					</div>
@@ -190,6 +190,7 @@ const PortfolioSection = () => {
 							{webPics.map((pic) => {
 								return (
 									<CarouselSlide
+										key={pic.title + pic.child.content}
 										allowPointerEvents
 										toggleModal={toggleModal}
 										setModalContent={() =>
@@ -214,6 +215,7 @@ const PortfolioSection = () => {
 							{designPics.map((pic) => {
 								return (
 									<CarouselSlide
+										key={pic.title + pic.child.content}
 										allowPointerEvents
 										toggleModal={toggleModal}
 										setModalContent={() =>

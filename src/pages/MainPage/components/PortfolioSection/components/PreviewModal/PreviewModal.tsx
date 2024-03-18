@@ -1,6 +1,7 @@
 import { FC } from 'react';
 import styles from './PreviewModal.module.scss';
 import { IModalContent } from '../../PortfolioSection';
+import { RxCross2 } from 'react-icons/rx';
 
 interface IPreviewModalProps {
 	content: IModalContent;
@@ -8,6 +9,13 @@ interface IPreviewModalProps {
 }
 
 const PreviewModal: FC<IPreviewModalProps> = ({ content, onCancel }) => {
+	const onClose = () => {
+		document.body?.removeAttribute('style');
+		onCancel();
+	};
+
+	document.body?.setAttribute('style', 'overflow: hidden');
+
 	const getModalContent = () => {
 		switch (content.child.type) {
 			case 'image':
@@ -24,7 +32,6 @@ const PreviewModal: FC<IPreviewModalProps> = ({ content, onCancel }) => {
 				return (
 					<iframe
 						className={styles.modalIframeVideo}
-						loading="lazy"
 						frameBorder={0}
 						src={`${content.child.content}&controls=0&modestbranding=1&rel=0&showinfo=0&disablekb=1`}
 						title="YouTube video player"
@@ -39,6 +46,9 @@ const PreviewModal: FC<IPreviewModalProps> = ({ content, onCancel }) => {
 	return (
 		<div className={styles.previewModal}>
 			<div className={styles.modalWindow}>
+				<div className={styles.cross} onClick={onClose}>
+					<RxCross2 />
+				</div>
 				<div className={styles.innerBox}>
 					<div className={styles.childrenWrapper}>
 						{getModalContent()}
@@ -52,7 +62,7 @@ const PreviewModal: FC<IPreviewModalProps> = ({ content, onCancel }) => {
 					</div>
 				</div>
 			</div>
-			<div className={styles.background} onClick={onCancel} />
+			<div className={styles.background} onClick={onClose} />
 		</div>
 	);
 };

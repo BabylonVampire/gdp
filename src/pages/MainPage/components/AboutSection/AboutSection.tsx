@@ -8,12 +8,7 @@ const AboutSection: FC<IAboutSectionProps> = () => {
 		<div className={styles.aboutSection}>
 			<div className={styles.innerBox}>
 				<div className={styles.animationBox}>
-					<video className={styles.animation} autoPlay muted loop>
-						<source
-							src="/src/assets/animation.mp4"
-							type="video/mp4"
-						/>
-					</video>
+					<div className={styles.animation} />
 				</div>
 				<div className={styles.textWrapper}>
 					<p className={styles.aboutText}>

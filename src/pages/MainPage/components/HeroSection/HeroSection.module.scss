@@ -1,5 +1,6 @@
 .heroSection {
 	height: 100vh;
+	min-height: 480px;
 	width: 100%;
 	display: flex;
 	flex-direction: column;
@@ -94,7 +95,7 @@
 
 .buttonBox {
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	gap: 10px;
 	width: 100%;
 }
@@ -108,6 +109,8 @@
 	justify-content: center;
 	color: var(--font-color-main);
 	font-size: var(--font-size-sm);
+	font-family: var(--font-family-main);
+	text-decoration: none;
 	border-radius: 7px;
 	border: none;
 	position: relative;
