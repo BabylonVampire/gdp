@@ -109,7 +109,7 @@ const FeedbackForm = () => {
 						<span>
 							<a
 								className={styles.personalAgreementLink}
-								href="gafurov-production/assets/personalAgreement.pdf"
+								href="assets/personalAgreement.pdf"
 								download
 							>
 								обработку персональных данных
