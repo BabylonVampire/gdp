@@ -21,18 +21,21 @@ $steps: 20;
 		overflow: hidden;
 		color: var(--font-color-main);
 		clip: rect(0, 900px, 0, 0);
+		-webkit-clip: rect(0, 900px, 0, 0);
 	}
 
 	&::before {
 		right: 2px;
 		text-shadow: 1px 0 green;
 		animation: glitch-effect 3s infinite linear alternate-reverse;
+		-webkit-animation: glitch-effect 3s infinite linear alternate-reverse;
 	}
 
 	&::after {
 		left: 1px;
 		text-shadow: -1px 0 red;
 		animation: glitch-effect 2s infinite linear alternate-reverse;
+		-webkit-animation: glitch-effect 2s infinite linear alternate-reverse;
 	}
 }
 
@@ -40,6 +43,7 @@ $steps: 20;
 	@for $i from 0 through $steps {
 		#{percentage($i*(calc(1/$steps)))} {
 			clip: rect(random(100) + px, 9999px, random(100) + px, 0);
+			-webkit-clip: rect(random(100) + px, 9999px, random(100) + px, 0);
 		}
 	}
 }
